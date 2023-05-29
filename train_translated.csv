@@ -1,0 +1,564 @@
+,segments_start,segments_end,sentence,chunk_name,parent_name,translations
+0,0.0,9.0,दोस्तों bash में nested और multilevel if statement के spoken tutorial में आपका स्वागत है,100051_GigsEKRBMhvNwolC_0000,GigsEKRBMhvNwolC,Friends welcome to the spoken tutorial of nested and multilevel if statement in bash.
+1,9.0,12.0,इस tutorial में हम निम्न के बारे में सीखेंगे,100051_GigsEKRBMhvNwolC_0001,GigsEKRBMhvNwolC,In this tutorial we will learn about the following
+2,12.0,14.0,nested ifelse और,100051_GigsEKRBMhvNwolC_0002,GigsEKRBMhvNwolC,nested ifelse else
+3,14.0,17.0,multilevel ifelse statement,100051_GigsEKRBMhvNwolC_0003,GigsEKRBMhvNwolC,multilevel ifelse statement
+4,17.0,22.0,हम यह कुछ उदाहरण उपयोग करके करेंगे,100051_GigsEKRBMhvNwolC_0004,GigsEKRBMhvNwolC,We will do this using some examples
+5,22.0,28.0,इस tutorial के अनुसरण के लिए आपको लिनक्स operating system से परिचित होना चाहिए,100051_GigsEKRBMhvNwolC_0005,GigsEKRBMhvNwolC,You must be familiar with Linux operating system to follow this tutorial
+6,28.0,35.0,यदि नहीं तो सम्बंधित tutorials के लिए कृपया हमारी website पर जाएँ,100051_GigsEKRBMhvNwolC_0006,GigsEKRBMhvNwolC,If not then please visit our website for related tutorials
+7,35.0,38.0,इस tutorial के लिए मैं उपयोग कर रही हूँ,100051_GigsEKRBMhvNwolC_0007,GigsEKRBMhvNwolC,for this tutorial i am using
+8,38.0,42.0,ubuntu लिनक्स 1204 os और,100051_GigsEKRBMhvNwolC_0008,GigsEKRBMhvNwolC,ubuntu linux 1204 os and
+9,42.0,46.0,gnu bash version 4110,100051_GigsEKRBMhvNwolC_0009,GigsEKRBMhvNwolC,gnu bash version 4110
+10,46.0,52.0,अभ्यास के लिए gnu bash version 4 या उससे नए की सलाह दी जाती है,100051_GigsEKRBMhvNwolC_0010,GigsEKRBMhvNwolC,gnu bash version 4 or newer is recommended for practice
+11,52.0,57.0,अब nested ifelse statement का flow यानी प्रवाह समझते हैं,100051_GigsEKRBMhvNwolC_0011,GigsEKRBMhvNwolC,Now understand the flow of nested ifelse statement
+12,57.0,64.0,यहाँ यदि condition 1 true है तो condition 2 मूल्यांकित की जाएगी,100051_GigsEKRBMhvNwolC_0012,GigsEKRBMhvNwolC,Here if condition 1 is true then condition 2 will be evaluated
+13,64.0,70.0,यदि कंडीशन 2 true है तो statement 1 निष्पादित किया जाएगा,100051_GigsEKRBMhvNwolC_0013,GigsEKRBMhvNwolC,if condition 2 is true then statement 1 will be executed
+14,70.0,79.0,जिसका मतलब है केवल जब conditions 1 और 2 दोनों true हैं that statement 1 निष्पादित किया जायेगा,100051_GigsEKRBMhvNwolC_0014,GigsEKRBMhvNwolC,Which means only when both conditions 1 and 2 are true that statement 1 will be executed
+15,79.0,85.0,यदि कंडीशन 1 false है तो statement 3 निष्पादित किया जायेगा,100051_GigsEKRBMhvNwolC_0015,GigsEKRBMhvNwolC,if condition 1 is false then statement 3 will be executed
+16,85.0,91.0,और यदि condition 2 false है तो statement 2 निष्पादित किया जायेगा,100051_GigsEKRBMhvNwolC_0016,GigsEKRBMhvNwolC,else if condition 2 is false then statement 2 will be executed
+17,91.0,93.0,एक उदाहरण देखते हैं,100051_GigsEKRBMhvNwolC_0017,GigsEKRBMhvNwolC,see an example
+18,93.0,98.0,मैंने nestedifelse sh file में code लिख लिया है,100051_GigsEKRBMhvNwolC_0018,GigsEKRBMhvNwolC,I have written code in nestedifelse sh file
+19,98.0,100.0,मैं इसे खोलूंगी,100051_GigsEKRBMhvNwolC_0019,GigsEKRBMhvNwolC,i will open it
+20,100.0,103.0,अब मैं code समझाती हूँ,100051_GigsEKRBMhvNwolC_0020,GigsEKRBMhvNwolC,now i explain the code
+21,103.0,105.0,यह शीबैंग line है,100051_GigsEKRBMhvNwolC_0021,GigsEKRBMhvNwolC,this is the shebang line
+22,105.0,110.0,variable name को value anusha नियुक्त की गयी है,100051_GigsEKRBMhvNwolC_0022,GigsEKRBMhvNwolC,variable name is assigned value anusha
+23,110.0,116.0,variable password को value abc123 नियुक्त की गयी है,100051_GigsEKRBMhvNwolC_0023,GigsEKRBMhvNwolC,variable password is assigned the value abc123
+24,116.0,122.0,read command मानक input से data की एक line को पढ़ता है,100051_GigsEKRBMhvNwolC_0024,GigsEKRBMhvNwolC,The read command reads a line of data from standard input.
+25,122.0,125.0,hyphen p flag prompt को दिखाता है,100051_GigsEKRBMhvNwolC_0025,GigsEKRBMhvNwolC,hyphen p shows the flag prompt
+26,125.0,131.0,hyphen p के बाद enter name: यह string terminal पर दिखाया जायेगा,100051_GigsEKRBMhvNwolC_0026,GigsEKRBMhvNwolC,Enter name after hyphen p: this string will be displayed on the terminal
+27,131.0,138.0,myname variable है जो यूज़र के द्वारा प्रविष्ट किया गया text जोकि यूज़र input है को संचित करता है,100051_GigsEKRBMhvNwolC_0027,GigsEKRBMhvNwolC,myname is the variable which stores the text entered by the user which is user input
+28,138.0,144.0,पहला if statement दो variables myname और name की तुलना करता है,100051_GigsEKRBMhvNwolC_0028,GigsEKRBMhvNwolC,The first if statement compares the two variables myname and name
+29,144.0,151.0,यानी यूज़र input और variable name में संचित value जोकि anusha है,100051_GigsEKRBMhvNwolC_0029,GigsEKRBMhvNwolC,i.e. the value stored in user input and variable name which is anusha
+30,151.0,158.0,अगर दो values मिलती हैं तो इस if statement में शेष code मूल्यांकित किया जायेगा,100051_GigsEKRBMhvNwolC_0030,GigsEKRBMhvNwolC,"If the two values ​​match, then the rest of the code in this if statement will be evaluated."
+31,158.0,166.0,read command पढ़ती है और variable mypassword में प्रविष्ट किया हुआ password संचित करती है,100051_GigsEKRBMhvNwolC_0031,GigsEKRBMhvNwolC,read command reads and stores the entered password in the variable mypassword
+32,166.0,169.0,यहाँ hyphen s flag silent mode के लिए है,100051_GigsEKRBMhvNwolC_0032,GigsEKRBMhvNwolC,here hyphen s is for flag silent mode
+33,169.0,176.0,इसका मतलब है कि यूज़र द्वारा प्रविष्ट किया हुआ text terminal पर प्रदर्शित नहीं किया जायेगा,100051_GigsEKRBMhvNwolC_0033,GigsEKRBMhvNwolC,This means that the text entered by the user will not be displayed on the terminal.
+34,176.0,179.0,यहाँ हमारे पास ifelse statements का एक अन्य set है,100051_GigsEKRBMhvNwolC_0034,GigsEKRBMhvNwolC,Here we have another set of ifelse statements
+35,179.0,185.0,ifelse statements का यह set पहले if में nested किया जाता है,100051_GigsEKRBMhvNwolC_0035,GigsEKRBMhvNwolC,This set of ifelse statements is nested in the first if
+36,185.0,192.0,दूसरा if statement variables mypassword और password की तुलना करता है,100051_GigsEKRBMhvNwolC_0036,GigsEKRBMhvNwolC,The second if statement compares the variables mypassword and password
+37,192.0,198.0,जब if condition true होती है तो echo terminal पर message welcome प्रदर्शित करता है,100051_GigsEKRBMhvNwolC_0037,GigsEKRBMhvNwolC,"When the if condition is true, echo displays the message welcome on the terminal."
+38,198.0,201.0,यानी passwords मिलता है,100051_GigsEKRBMhvNwolC_0038,GigsEKRBMhvNwolC,i.e. get passwords
+39,201.0,207.0,e backslash escape की व्याश्या संभव बनाता है,100051_GigsEKRBMhvNwolC_0039,GigsEKRBMhvNwolC,e makes the backslash escape possible
+40,207.0,215.0,\n नयी line के लिए है; जिसका मतलब है string welcome printed किया जायेगा,100051_GigsEKRBMhvNwolC_0040,GigsEKRBMhvNwolC,\n is for new line; which means string welcome will be printed
+41,215.0,222.0,जब if condition true नहीं होती है तो else condition निष्पादित की जाएगी;,100051_GigsEKRBMhvNwolC_0041,GigsEKRBMhvNwolC,When the if condition is not true then the else condition will be executed;
+42,222.0,228.0,यानी जब passwords मिलान नहीं होता है तो else condition निष्पादित की जाएगी,100051_GigsEKRBMhvNwolC_0042,GigsEKRBMhvNwolC,i.e. when passwords does not match then else condition will be executed
+43,228.0,233.0,इस स्थिति में echo wrong password दिखायेगा,100051_GigsEKRBMhvNwolC_0043,GigsEKRBMhvNwolC,In this case echo will show wrong password
+44,233.0,237.0,fi भीतरी ifelse statement समाप्त करता है,100051_GigsEKRBMhvNwolC_0044,GigsEKRBMhvNwolC,fi terminates the inner ifelse statement
+45,237.0,241.0,अपने पहले ifelse statement पर वापस आते हैं,100051_GigsEKRBMhvNwolC_0045,GigsEKRBMhvNwolC,Let's go back to our first ifelse statement
+46,241.0,249.0,अगर myname और name में values मिलान नहीं होती हैं तो यह else statement निष्पादित किया जायेगा,100051_GigsEKRBMhvNwolC_0046,GigsEKRBMhvNwolC,This else statement will be executed if the values ​​in myname and name do not match.
+47,249.0,254.0,यह terminal पर message wrong name echo करेगा,100051_GigsEKRBMhvNwolC_0047,GigsEKRBMhvNwolC,This will echo the message wrong name on the terminal
+48,254.0,258.0,fi बहरी ifelse statement समाप्त करेगा,100051_GigsEKRBMhvNwolC_0048,GigsEKRBMhvNwolC,fi will terminate the outer ifelse statement
+49,258.0,267.0,अब अपने keyboard पर ctrl + alt और t कीज़ एकसाथ दबाकर terminal window खोलें,100051_GigsEKRBMhvNwolC_0049,GigsEKRBMhvNwolC,Now open terminal window by pressing ctrl + alt and t keys together on your keyboard
+50,267.0,269.0,file को निष्पादन योग्य बनाते हैं,100051_GigsEKRBMhvNwolC_0050,GigsEKRBMhvNwolC,make the file executable
+51,269.0,278.0,type करें: chmod space plus x space nestedifelse sh,100051_GigsEKRBMhvNwolC_0051,GigsEKRBMhvNwolC,type करें: chmod space plus x space nestedifelse sh
+52,278.0,283.0,अब type करें dot slash nestedifelse sh,100051_GigsEKRBMhvNwolC_0052,GigsEKRBMhvNwolC,Now type dot slash nestedifelse sh
+53,283.0,286.0,program दो conditions प्रमाणित करता है,100051_GigsEKRBMhvNwolC_0053,GigsEKRBMhvNwolC,program verifies two conditions
+54,286.0,288.0,यानी name और password,100051_GigsEKRBMhvNwolC_0054,GigsEKRBMhvNwolC,ie name and password
+55,288.0,292.0,जब यह terminal पर निष्पादित किया जाता है,100051_GigsEKRBMhvNwolC_0055,GigsEKRBMhvNwolC,when it is executed on terminal
+56,292.0,295.0,यहाँ prompt enter name निष्पादित करता है,100051_GigsEKRBMhvNwolC_0056,GigsEKRBMhvNwolC,Here prompt enter name executes
+57,295.0,297.0,अब type करें anusha,100051_GigsEKRBMhvNwolC_0057,GigsEKRBMhvNwolC,now type anusha
+58,297.0,302.0,चूँकि यह condition true होती है अतः अगली if condition मूल्यांकित की जाएगी,100051_GigsEKRBMhvNwolC_0058,GigsEKRBMhvNwolC,"Since this condition is true, the next if condition will be evaluated."
+59,302.0,305.0,अब prompt दिखाता है password,100051_GigsEKRBMhvNwolC_0059,GigsEKRBMhvNwolC,now prompt shows password
+60,305.0,310.0,मैं password में abc123 type करुँगी,100051_GigsEKRBMhvNwolC_0060,GigsEKRBMhvNwolC,i will type abc123 in password
+61,310.0,315.0,ये password variable password में value से मिलता है,100051_GigsEKRBMhvNwolC_0061,GigsEKRBMhvNwolC,This password is obtained from the value in the variable password
+62,315.0,319.0,इसलिए prompt message welcome दिखाता है,100051_GigsEKRBMhvNwolC_0062,GigsEKRBMhvNwolC,so the prompt message shows welcome
+63,319.0,321.0,अब script को दोबारा निष्पादित करते हैं,100051_GigsEKRBMhvNwolC_0063,GigsEKRBMhvNwolC,now execute the script again
+64,321.0,324.0,अप arrow की दबाएं,100051_GigsEKRBMhvNwolC_0064,GigsEKRBMhvNwolC,press the up arrow key
+65,324.0,329.0,dot slash nestedifelse sh पर जाएँ,100051_GigsEKRBMhvNwolC_0065,GigsEKRBMhvNwolC,dot slash nestedifelse go to sh
+66,329.0,331.0,enter दबाएं,100051_GigsEKRBMhvNwolC_0066,GigsEKRBMhvNwolC,press enter
+67,331.0,337.0,इस समय हम वही name अलग password के साथ प्रविष्ट करेंगे,100051_GigsEKRBMhvNwolC_0067,GigsEKRBMhvNwolC,This time we will enter the same name with different password
+68,337.0,344.0,अतः मैं name में anusha और password में 123 प्रविष्ट करुँगी,100051_GigsEKRBMhvNwolC_0068,GigsEKRBMhvNwolC,So I will enter anusha in name and 123 in password.
+69,344.0,349.0,name की values मिलेंगी लेकिन password की values नहीं,100051_GigsEKRBMhvNwolC_0069,GigsEKRBMhvNwolC,Name values ​​will be found but password values ​​will not.
+70,349.0,353.0,अतः message wrong password प्रदर्शित किया जायेगा,100051_GigsEKRBMhvNwolC_0070,GigsEKRBMhvNwolC,Hence message wrong password will be displayed
+71,353.0,361.0,यह सिद्ध करता है कि पहले if statement के अंदर nested else statement निष्पादित किया गया था,100051_GigsEKRBMhvNwolC_0071,GigsEKRBMhvNwolC,Proves that the nested else statement inside the first if statement was executed
+72,361.0,364.0,एक बार और script को निष्पादित करते हैं,100051_GigsEKRBMhvNwolC_0072,GigsEKRBMhvNwolC,execute the script one more time
+73,364.0,368.0,इस समय हम name में swati प्रविष्ट करेंगे,100051_GigsEKRBMhvNwolC_0073,GigsEKRBMhvNwolC,At this point we will enter swati in the name
+74,368.0,372.0,message wrong name प्रदर्शित होता है,100051_GigsEKRBMhvNwolC_0074,GigsEKRBMhvNwolC,message wrong name is displayed
+75,372.0,379.0,ऐसा इसलिए क्योंकि name swati पहले घोषित की गयी value anusha से नहीं मिलता,100051_GigsEKRBMhvNwolC_0075,GigsEKRBMhvNwolC,This is because the name swati does not match with the previously declared value anusha.
+76,379.0,385.0,control पहले if statement के बाहर आता है और else statement निष्पादित करता है,100051_GigsEKRBMhvNwolC_0076,GigsEKRBMhvNwolC,control comes outside the first if statement and executes the else statement
+77,385.0,389.0,यह message wrong name prints करता है,100051_GigsEKRBMhvNwolC_0077,GigsEKRBMhvNwolC,This message prints wrong name
+78,389.0,394.0,अब multilevel ifelse statement को देखते हैं,100051_GigsEKRBMhvNwolC_0078,GigsEKRBMhvNwolC,Now let's see the multilevel ifelse statement
+79,394.0,400.0,अगर कंडीशन 1 true है तो statement1 1 निष्पादित होता है,100051_GigsEKRBMhvNwolC_0079,GigsEKRBMhvNwolC,if condition 1 is true then statement1 1 is executed
+80,400.0,406.0,अगर condition 1 false है तो condition 2 मूल्यांकित होती है,100051_GigsEKRBMhvNwolC_0080,GigsEKRBMhvNwolC,if condition 1 is false then condition 2 is evaluated
+81,406.0,412.0,अगर कंडीशन 2 true है तो statement 2 निष्पादित होता है,100051_GigsEKRBMhvNwolC_0081,GigsEKRBMhvNwolC,if condition 2 is true then statement 2 is executed
+82,412.0,418.0,अगर condition 2 false है तो condition n मूल्यांकित होती है,100051_GigsEKRBMhvNwolC_0082,GigsEKRBMhvNwolC,if condition 2 is false then condition n is evaluated
+83,418.0,423.0,अगर condition n true है तो statement n निष्पादित होता है,100051_GigsEKRBMhvNwolC_0083,GigsEKRBMhvNwolC,if condition n is true then statement n is executed
+84,423.0,430.0,और अगर condition n false है तो statement x निष्पादित होता है,100051_GigsEKRBMhvNwolC_0084,GigsEKRBMhvNwolC,else if condition n is false then statement x is executed
+85,430.0,432.0,अब एक उदाहरण देखते हैं,100051_GigsEKRBMhvNwolC_0085,GigsEKRBMhvNwolC,now let's see an example
+86,432.0,434.0,मेरे पास एक कार्यकारी उदाहरण है,100051_GigsEKRBMhvNwolC_0086,GigsEKRBMhvNwolC,I have a working example
+87,434.0,443.0,मैं इसे खोलूंगी ध्यान दें हमारी फाइल का name multilevel hyphen ifelse dot sh है,100051_GigsEKRBMhvNwolC_0087,GigsEKRBMhvNwolC,I'll open it note that our file name is multilevel hyphen ifelse dot sh
+88,443.0,445.0,अब code पूरा समझते हैं,100051_GigsEKRBMhvNwolC_0088,GigsEKRBMhvNwolC,now understand the code completely
+89,445.0,447.0,यह शीबैंग line है,100051_GigsEKRBMhvNwolC_0089,GigsEKRBMhvNwolC,this is the shebang line
+90,447.0,454.0,mystring एक variable है जो निष्पादन के दौरान यूज़र द्वारा input शब्द संचित करता है,100051_GigsEKRBMhvNwolC_0090,GigsEKRBMhvNwolC,mystring is a variable that stores the words input by the user during execution
+91,454.0,459.0,if condition जाँचती है कि the input string नल null है,100051_GigsEKRBMhvNwolC_0091,GigsEKRBMhvNwolC,if condition checks whether the input string is null
+92,459.0,464.0,hyphen z जाँचता है कि क्या string की लम्बाई zero है,100051_GigsEKRBMhvNwolC_0092,GigsEKRBMhvNwolC,hyphen z checks if the length of the string is zero
+93,464.0,471.0,terminal पर type करें man test और अनेक string comparison का अन्वेषण करें,100051_GigsEKRBMhvNwolC_0093,GigsEKRBMhvNwolC,Type man test on terminal and explore the many string comparisons
+94,471.0,476.0,अगर कुछ भी प्रविष्ट नहीं किया जाता तो echo statement printed किया जायेगा,100051_GigsEKRBMhvNwolC_0094,GigsEKRBMhvNwolC,If nothing is entered then echo statement will be printed
+95,476.0,483.0,पहली elif condition जाँचती है कि the input string में raj है,100051_GigsEKRBMhvNwolC_0095,GigsEKRBMhvNwolC,The first elif condition checks that the input string contains raj
+96,483.0,488.0,अगर है तो यह echo statement printed किया जायेगा,100051_GigsEKRBMhvNwolC_0096,GigsEKRBMhvNwolC,If yes then this echo statement will be printed
+97,488.0,495.0,वाइल्ड कार्ड्स character निश्चित करता है कि इसमें raj के साथ कोई भी शब्द पहचाना जाएगा,100051_GigsEKRBMhvNwolC_0097,GigsEKRBMhvNwolC,The wildcard character ensures that any word with raj in it will be recognized.
+98,495.0,502.0,अगली elif condition जाँचती है कि the input string में शब्द jit है,100051_GigsEKRBMhvNwolC_0098,GigsEKRBMhvNwolC,The next elif condition checks that the input string contains the word jit
+99,502.0,507.0,अगर है तो यह echo statement printed किया जायेगा,100051_GigsEKRBMhvNwolC_0099,GigsEKRBMhvNwolC,If yes then this echo statement will be printed
+100,507.0,513.0,जब ऊपर की सारी conditions fail हो जाएँगी तो else condition निष्पादित की जाएगी,100051_GigsEKRBMhvNwolC_0100,GigsEKRBMhvNwolC,When all the above conditions fail then else condition will be executed.
+101,513.0,521.0,और यह sorry! input does not contain either raj or jit message दिखायेगा,100051_GigsEKRBMhvNwolC_0101,GigsEKRBMhvNwolC,And it's sorry! input does not contain either raj or jit message will show
+102,521.0,526.0,fi multilevel ifelse statement का अंत दिखाता है,100051_GigsEKRBMhvNwolC_0102,GigsEKRBMhvNwolC,fi shows the end of the multilevel ifelse statement
+103,526.0,528.0,अब program निष्पादित करते हैं,100051_GigsEKRBMhvNwolC_0103,GigsEKRBMhvNwolC,now execute the program
+104,528.0,531.0,अपने terminal पर वापस आते हैं,100051_GigsEKRBMhvNwolC_0104,GigsEKRBMhvNwolC,come back to your terminal
+105,531.0,540.0,type करें: chmod space plus x space multilevel hyphen ifelse dot sh,100051_GigsEKRBMhvNwolC_0105,GigsEKRBMhvNwolC,type करें: chmod space plus x space multilevel hyphen ifelse dot sh
+106,540.0,546.0,type करें dot slash multilevel hyphen ifelse dot sh,100051_GigsEKRBMhvNwolC_0106,GigsEKRBMhvNwolC,type करें dot slash multilevel hyphen ifelse dot sh
+107,546.0,549.0,हमसे input के लिए पूछा जाता है,100051_GigsEKRBMhvNwolC_0107,GigsEKRBMhvNwolC,we are asked for input
+108,549.0,554.0,अब हम भिन्नभिन्न inputs देते हैं और देखते हैं कि हर बार क्या होता है,100051_GigsEKRBMhvNwolC_0108,GigsEKRBMhvNwolC,Now we give different inputs and see what happens each time
+109,554.0,559.0,पहले मैं बिना कुछ टाइप किये enter दबाऊँगी,100051_GigsEKRBMhvNwolC_0109,GigsEKRBMhvNwolC,first i will press enter without typing anything
+110,559.0,562.0,nothing was entered message दिखता है,100051_GigsEKRBMhvNwolC_0110,GigsEKRBMhvNwolC,nothing was entered message appears
+111,562.0,568.0,और control multilevel ifelse statement के बाहर आ जाता है,100051_GigsEKRBMhvNwolC_0111,GigsEKRBMhvNwolC,and the control comes out of the multilevel ifelse statement
+112,568.0,570.0,अब मैं prompt clear करती हूँ,100051_GigsEKRBMhvNwolC_0112,GigsEKRBMhvNwolC,now i clear the prompt
+113,570.0,574.0,अब script को भिन्न input के साथ निष्पादित करने की कोशिश करते हैं,100051_GigsEKRBMhvNwolC_0113,GigsEKRBMhvNwolC,Now let's try to execute the script with different input
+114,574.0,576.0,अप arrow की दबाएं,100051_GigsEKRBMhvNwolC_0114,GigsEKRBMhvNwolC,press the up arrow key
+115,576.0,581.0,dot slash multilevel hyphen ifelse dot sh पर जाएँ,100051_GigsEKRBMhvNwolC_0115,GigsEKRBMhvNwolC,go to dot slash multilevel hyphen ifelse dot sh
+116,581.0,583.0,enter दबाएं,100051_GigsEKRBMhvNwolC_0116,GigsEKRBMhvNwolC,press enter
+117,583.0,585.0,prompt enter a word दिखाता है,100051_GigsEKRBMhvNwolC_0117,GigsEKRBMhvNwolC,prompt enter a word
+118,585.0,588.0,मैं abhijit type करुँगी,100051_GigsEKRBMhvNwolC_0118,GigsEKRBMhvNwolC,i will type abhijit
+119,588.0,593.0,abhijit contains word jit output दिखता है,100051_GigsEKRBMhvNwolC_0119,GigsEKRBMhvNwolC,abhijit contains word jit output looks like
+120,593.0,599.0,यह दिखाता है कि हमारे code में control तीसरी condition पर गया,100051_GigsEKRBMhvNwolC_0120,GigsEKRBMhvNwolC,This shows that the control passed to the third condition in our code
+121,599.0,603.0,पहली दो conditions मेल नहीं हुई,100051_GigsEKRBMhvNwolC_0121,GigsEKRBMhvNwolC,first two conditions did not match
+122,603.0,607.0,वहीं logic सारी conditions पर लगता है,100051_GigsEKRBMhvNwolC_0122,GigsEKRBMhvNwolC,Whereas logic applies to all conditions.
+123,607.0,613.0,भिन्नभिन्न inputs के लिए program को निष्पादित करने की कोशिश करें और परिणामों को जाँचें,100051_GigsEKRBMhvNwolC_0123,GigsEKRBMhvNwolC,Try executing the program for different inputs and check the results
+124,613.0,615.0,अब सारांशित करते हैं,100051_GigsEKRBMhvNwolC_0124,GigsEKRBMhvNwolC,now let's summarize
+125,615.0,618.0,इस tutorial में हमने सीखा:,100051_GigsEKRBMhvNwolC_0125,GigsEKRBMhvNwolC,In this tutorial we learned:
+126,618.0,623.0,name और password सत्यापन के साथ nested ifelse का उपयोग और,100051_GigsEKRBMhvNwolC_0126,GigsEKRBMhvNwolC,using nested ifelse with name and password validation and
+127,623.0,628.0,multilevel ifelse: string comparison program का उपयोग,100051_GigsEKRBMhvNwolC_0127,GigsEKRBMhvNwolC,multilevel ifelse: use of string comparison program
+128,628.0,634.0,एक नियत कार्य में भिन्नभिन्न output के लिए एक program लिखें जब number,100051_GigsEKRBMhvNwolC_0128,GigsEKRBMhvNwolC,Write a program for different output in an assignment when number
+129,634.0,637.0,3 से बड़ा हो 3 से छोटा हो,100051_GigsEKRBMhvNwolC_0129,GigsEKRBMhvNwolC,greater than 3 less than 3
+130,637.0,639.0,या 3 के बराबर हो,100051_GigsEKRBMhvNwolC_0130,GigsEKRBMhvNwolC,or equal to 3
+131,639.0,642.0,या जब यूज़र input खाली हो,100051_GigsEKRBMhvNwolC_0131,GigsEKRBMhvNwolC,or when user input is empty
+132,642.0,645.0,निम्न link पर उपलब्ध video देखें,100051_GigsEKRBMhvNwolC_0132,GigsEKRBMhvNwolC,Watch the video available on the following link
+133,645.0,648.0,यह spoken tutorial project को सारांशित करता है,100051_GigsEKRBMhvNwolC_0133,GigsEKRBMhvNwolC,This summarizes the spoken tutorial project
+134,648.0,653.0,अच्छी bandwidth न मिलने पर आप इसे download करके देख सकते हैं,100051_GigsEKRBMhvNwolC_0134,GigsEKRBMhvNwolC,"If you do not get good bandwidth, you can download and watch it."
+135,653.0,655.0,spoken tutorial project team,100051_GigsEKRBMhvNwolC_0135,GigsEKRBMhvNwolC,spoken tutorial project team
+136,655.0,658.0,spoken tutorials का उपयोग करके कार्यशालाएं चालती है,100051_GigsEKRBMhvNwolC_0136,GigsEKRBMhvNwolC,conducts workshops using spoken tutorials
+137,658.0,662.0,online test pass करने वालों को प्रमाणपत्र देते हैं,100051_GigsEKRBMhvNwolC_0137,GigsEKRBMhvNwolC,Certificates are given to those who pass the online test
+138,662.0,669.0,अधिक जानकारी के लिए contact @spokentutorial org पर लिखें,100051_GigsEKRBMhvNwolC_0138,GigsEKRBMhvNwolC,For more information write to contact @spokentutorial org
+139,669.0,673.0,spoken tutorial project talk to a teacher project का हिस्सा है,100051_GigsEKRBMhvNwolC_0139,GigsEKRBMhvNwolC,The spoken tutorial project is part of the talk to a teacher project
+140,673.0,680.0,यह भारत सरकार के it it आर दी के आई सी टी के माध्यम से राष्ट्रीय साक्षरता mission द्वारा समर्थित है,100051_GigsEKRBMhvNwolC_0140,GigsEKRBMhvNwolC,It is supported by National Mission on Literacy through ICT of Government of India
+141,680.0,686.0,इस mission पर अधिक जानकारी नीचे दर्शाये link पर उपलब्ध है,100051_GigsEKRBMhvNwolC_0141,GigsEKRBMhvNwolC,More information on this mission is available at the link shown below
+142,686.0,691.0,यह script प्रभाकर द्वारा अनुवादित है,100051_GigsEKRBMhvNwolC_0142,GigsEKRBMhvNwolC,This script is translated by Prabhakar
+143,691.0,697.08,आई आई टी बॉम्बे से मैं श्रुति आर्य अब आपसे विदा लेती हूँ हमसे जुड़ने धन्यवाद,100051_GigsEKRBMhvNwolC_0143,GigsEKRBMhvNwolC,I Shruti Arya from IIT Bombay bid you farewell. Thank you for joining us.
+144,1.0,7.0,नमस्कार features of gchem3d के इस tutorial में आपका स्वागत है,100356_CwvWvuD1g8RaNQ2j_0000,CwvWvuD1g8RaNQ2j,Hello welcome to this tutorial of features of gchem3d
+145,7.0,10.0,इस tutorial में हम निम्न के बारे में सीखेंगे,100356_CwvWvuD1g8RaNQ2j_0001,CwvWvuD1g8RaNQ2j,In this tutorial we will learn about the following
+146,10.0,13.0,menu bar file type formats,100356_CwvWvuD1g8RaNQ2j_0002,CwvWvuD1g8RaNQ2j,menu bar file type formats
+147,13.0,15.0,अनेक प्रकार के model types और,100356_CwvWvuD1g8RaNQ2j_0003,CwvWvuD1g8RaNQ2j,Many types of model types and
+148,15.0,18.0,background color को कैसे बदलें,100356_CwvWvuD1g8RaNQ2j_0004,CwvWvuD1g8RaNQ2j,how to change background color
+149,18.0,24.0,इस tutorial के लिए मैं उपयोग कर रही हूँ ubuntu लिनक्स os version 1204,100356_CwvWvuD1g8RaNQ2j_0005,CwvWvuD1g8RaNQ2j,For this tutorial i am using ubuntu linux os version 1204
+150,24.0,29.0,gchempaint version 01210,100356_CwvWvuD1g8RaNQ2j_0006,CwvWvuD1g8RaNQ2j,gchempaint version 01210
+151,29.0,34.0,gchem3d version 01210,100356_CwvWvuD1g8RaNQ2j_0007,CwvWvuD1g8RaNQ2j,gchem3d version 01210
+152,34.0,38.0,इस tutorial के अनुसरण के लिए आपको gchempaint से परिचित होना चाहिये,100356_CwvWvuD1g8RaNQ2j_0008,CwvWvuD1g8RaNQ2j,You must be familiar with gchempaint to follow this tutorial
+153,38.0,44.0,यदि नहीं तो सम्बंधित tutorials के लिए कृपया हमारी website पर जाएँ,100356_CwvWvuD1g8RaNQ2j_0009,CwvWvuD1g8RaNQ2j,If not then please visit our website for related tutorials
+154,44.0,47.0,मैंने एक नयी gchempaint window खोली है,100356_CwvWvuD1g8RaNQ2j_0010,CwvWvuD1g8RaNQ2j,I have opened a new gchempaint window
+155,47.0,49.0,templates drop down उपयोग करके,100356_CwvWvuD1g8RaNQ2j_0011,CwvWvuD1g8RaNQ2j,using templates drop down
+156,49.0,53.0,मैं display area पर adenosine adenosine के structure को load करुँगी,100356_CwvWvuD1g8RaNQ2j_0012,CwvWvuD1g8RaNQ2j,I will load the structure of adenosine adenosine on the display area
+157,53.0,58.0,file को सेव करने के लिए tool bar पर सेव icon पर click करें,100356_CwvWvuD1g8RaNQ2j_0013,CwvWvuD1g8RaNQ2j,Click on the save icon on the toolbar to save the file.
+158,58.0,62.0,save as dialog box खुलता है,100356_CwvWvuD1g8RaNQ2j_0014,CwvWvuD1g8RaNQ2j,save as dialog box opens
+159,62.0,71.0,file को gchem3d में देखने के लिए इसे file formats जैसे mol mdl और pdb में सेव करना पड़ता है,100356_CwvWvuD1g8RaNQ2j_0015,CwvWvuD1g8RaNQ2j,To view the file in gchem3d it has to be saved in file formats like mol mdl and pdb
+160,71.0,75.0,file का name adenosine pdb type करें,100356_CwvWvuD1g8RaNQ2j_0016,CwvWvuD1g8RaNQ2j,type file name adenosine pdb
+161,75.0,78.0,desktop पर file सेव करने के लिए desktop पर click करें,100356_CwvWvuD1g8RaNQ2j_0017,CwvWvuD1g8RaNQ2j,click on desktop to save the file on desktop
+162,78.0,81.0,सेव button पर click करें,100356_CwvWvuD1g8RaNQ2j_0018,CwvWvuD1g8RaNQ2j,click on save button
+163,81.0,85.0,मैं gchempaint window बंद करुँगी,100356_CwvWvuD1g8RaNQ2j_0019,CwvWvuD1g8RaNQ2j,i will close the gchempaint window
+164,85.0,89.0,अब gchem3d application के बारे में सीखें,100356_CwvWvuD1g8RaNQ2j_0020,CwvWvuD1g8RaNQ2j,Now learn about gchem3d application
+165,89.0,94.0,gchem3d gchempaint के utility सॉफ्टवेयर की तरह संस्थापित किया जा सकता है,100356_CwvWvuD1g8RaNQ2j_0021,CwvWvuD1g8RaNQ2j,gchem3d can be installed as utility software for gchempaint
+166,94.0,98.0,synaptic package manager उपयोग करके,100356_CwvWvuD1g8RaNQ2j_0022,CwvWvuD1g8RaNQ2j,using synaptic package manager
+167,98.0,100.0,synaptic package manager synaptic package manager पर जाएँ,100356_CwvWvuD1g8RaNQ2j_0023,CwvWvuD1g8RaNQ2j,synaptic package manager synaptic package manager पर जाएँ
+168,100.0,104.0,quick filter quick filter box में gchempaint type करें,100356_CwvWvuD1g8RaNQ2j_0024,CwvWvuD1g8RaNQ2j,quick filter quick filter box में gchempaint type करें
+169,104.0,115.0,gchempaint utilities के पूर्ण संस्थापन के लिए gcuplugin libgcudbg और gcubin संस्थापित करें,100356_CwvWvuD1g8RaNQ2j_0025,CwvWvuD1g8RaNQ2j,install gcuplugin libgcudbg and gcubin for full installation of gchempaint utilities
+170,115.0,119.0,मैंने पहले ही सारी files संस्थापित कर ली थी,100356_CwvWvuD1g8RaNQ2j_0026,CwvWvuD1g8RaNQ2j,i already installed all the files
+171,119.0,124.0,gchem3d 3 डाइमेंशनल मॉलिक्यूलर structure विज्युलाइज़र visualizer है,100356_CwvWvuD1g8RaNQ2j_0027,CwvWvuD1g8RaNQ2j,gchem3d is a 3 dimensional molecular structure visualizer
+172,124.0,127.0,यह gchempaint का utility feature है,100356_CwvWvuD1g8RaNQ2j_0028,CwvWvuD1g8RaNQ2j,This is a utility feature of gchempaint
+173,127.0,132.0,gchempaint में बनाये गए structures gchem3d में देखे जा सकते हैं,100356_CwvWvuD1g8RaNQ2j_0029,CwvWvuD1g8RaNQ2j,Structures made in gchempaint can be seen in gchem3d.
+174,132.0,135.0,gchem3d खोलने के लिए dash home पर click करें,100356_CwvWvuD1g8RaNQ2j_0030,CwvWvuD1g8RaNQ2j,click on dash home to open gchem3d
+175,135.0,140.0,प्रदर्शित search bar में gchem3d type करें,100356_CwvWvuD1g8RaNQ2j_0031,CwvWvuD1g8RaNQ2j,type gchem3d in the displayed search bar
+176,140.0,144.0,molecules viewer icon पर click करें,100356_CwvWvuD1g8RaNQ2j_0032,CwvWvuD1g8RaNQ2j,click on the molecules viewer icon
+177,144.0,150.0,gchem3d viewer window menubar और display area रखती है,100356_CwvWvuD1g8RaNQ2j_0033,CwvWvuD1g8RaNQ2j,gchem3d viewer window holds menubar and display area
+178,150.0,156.0,menubar वो सभी commands रखती है जिनकी आपको gchem3d में काम करने में ज़रुरत है,100356_CwvWvuD1g8RaNQ2j_0034,CwvWvuD1g8RaNQ2j,The menubar holds all the commands you need to work in gchem3d.
+179,156.0,160.0,display area खुली हुई file की विषयवस्तु प्रदर्शित करता है,100356_CwvWvuD1g8RaNQ2j_0035,CwvWvuD1g8RaNQ2j,display area displays the contents of the open file
+180,160.0,166.0,file खोलने के लिए file select करें open पर click करें,100356_CwvWvuD1g8RaNQ2j_0036,CwvWvuD1g8RaNQ2j,To open the file select the file click on open
+181,166.0,169.0,open dialog box खुलता है,100356_CwvWvuD1g8RaNQ2j_0037,CwvWvuD1g8RaNQ2j,open dialog box opens
+182,169.0,172.0,file select करे जो आप खोलना चाहते हैं,100356_CwvWvuD1g8RaNQ2j_0038,CwvWvuD1g8RaNQ2j,select the file you want to open
+183,172.0,177.0,मैं अपने desktop पर adenosine pdb select करुँगी,100356_CwvWvuD1g8RaNQ2j_0039,CwvWvuD1g8RaNQ2j,I will select adenosine pdb on my desktop
+184,177.0,179.0,open button पर click करें,100356_CwvWvuD1g8RaNQ2j_0040,CwvWvuD1g8RaNQ2j,click on open button
+185,179.0,182.0,displayed area पर file प्रदर्शित हुई है,100356_CwvWvuD1g8RaNQ2j_0041,CwvWvuD1g8RaNQ2j,file is displayed on the displayed area
+186,182.0,185.0,अब दृश्य को image की तरह सेव करना सीखें,100356_CwvWvuD1g8RaNQ2j_0042,CwvWvuD1g8RaNQ2j,Now learn how to save a scene as an image
+187,185.0,190.0,file पर click करें save as image पर जाएँ,100356_CwvWvuD1g8RaNQ2j_0043,CwvWvuD1g8RaNQ2j,click on file go to save as image
+188,190.0,192.0,save as image dialog box खुलता है,100356_CwvWvuD1g8RaNQ2j_0044,CwvWvuD1g8RaNQ2j,save as image dialog box opens
+189,192.0,197.0,नीचे width और height parameters पर ध्यान दें,100356_CwvWvuD1g8RaNQ2j_0045,CwvWvuD1g8RaNQ2j,Pay attention to the width and height parameters below
+190,197.0,204.0,default image size width 300 pixels और height 300 pixels रखती है,100356_CwvWvuD1g8RaNQ2j_0046,CwvWvuD1g8RaNQ2j,default image size width 300 pixels और height 300 pixels रखती है
+191,204.0,209.0,आप scrollers scrollers उपयोग करके values को बड़ा या घटा सकते हैं,100356_CwvWvuD1g8RaNQ2j_0047,CwvWvuD1g8RaNQ2j,You can increase or decrease the values ​​using scrollers
+192,209.0,211.0,अब file type विकल्प पर,100356_CwvWvuD1g8RaNQ2j_0048,CwvWvuD1g8RaNQ2j,now on file type option
+193,211.0,215.0,gchem3d अनेक file formats का समर्थन करता है,100356_CwvWvuD1g8RaNQ2j_0049,CwvWvuD1g8RaNQ2j,gchem3d supports multiple file formats
+194,215.0,225.0,file types जैसे vrml pdf png और अन्य drop down सूची में उपलब्ध हैं,100356_CwvWvuD1g8RaNQ2j_0050,CwvWvuD1g8RaNQ2j,file types like vrml pdf png and others are available in drop down list
+195,225.0,232.0,अगर file का प्रकार नहीं स्पष्ट किया जाता तो gchem3d file के प्रकार को file के name से निर्धारित करने के लिए प्रयास करता है,100356_CwvWvuD1g8RaNQ2j_0051,CwvWvuD1g8RaNQ2j,"If the file type is not specified, gchem3d tries to determine the file type from the file name."
+196,232.0,238.0,अगर यह सफल नहीं होता है तो default file type में vrml उपयोग किया जायेगा,100356_CwvWvuD1g8RaNQ2j_0052,CwvWvuD1g8RaNQ2j,If this is not successful then the default file type vrml will be used.
+197,238.0,243.0,अब structure को vrml file format में सेव करें,100356_CwvWvuD1g8RaNQ2j_0053,CwvWvuD1g8RaNQ2j,Now save the structure in vrml file format
+198,243.0,247.0,vrml document विकल्प select करें,100356_CwvWvuD1g8RaNQ2j_0054,CwvWvuD1g8RaNQ2j,select vrml document option
+199,247.0,251.0,file का name adenosine adenosine type करें,100356_CwvWvuD1g8RaNQ2j_0055,CwvWvuD1g8RaNQ2j,type file name adenosine adenosine
+200,251.0,254.0,desktop पर file सेव करने के लिए desktop पर click करें,100356_CwvWvuD1g8RaNQ2j_0056,CwvWvuD1g8RaNQ2j,click on desktop to save the file on desktop
+201,254.0,257.0,सेव button पर click करें,100356_CwvWvuD1g8RaNQ2j_0057,CwvWvuD1g8RaNQ2j,click on save button
+202,257.0,262.0,अब हम सीखेंगे कि वास्तव में vrmlफाइल type क्या है,100356_CwvWvuD1g8RaNQ2j_0058,CwvWvuD1g8RaNQ2j,Now we will learn what exactly is vrml file type
+203,262.0,268.0,vrml  wrl extension के साथ text file format है,100356_CwvWvuD1g8RaNQ2j_0059,CwvWvuD1g8RaNQ2j,vrml is text file format with wrl extension
+204,268.0,275.0,3d पालीगान properties जैसे vertices vertices edges edges surface color surface color उल्लिखित किये जा सकते हैं,100356_CwvWvuD1g8RaNQ2j_0060,CwvWvuD1g8RaNQ2j,3d polygon properties like vertices vertices edges edges surface color surface color can be specified
+205,275.0,280.0,vrml files plain text हैं जो gzip में compress होती हैं,100356_CwvWvuD1g8RaNQ2j_0061,CwvWvuD1g8RaNQ2j,vrml files are plain text compressed in gzip
+206,280.0,285.0,3d modeling programs objects और scenes को इसमें सेव करते हैं,100356_CwvWvuD1g8RaNQ2j_0062,CwvWvuD1g8RaNQ2j,3d modeling programs save objects and scenes in
+207,285.0,288.0,अब सेव की हुई file को खोलें,100356_CwvWvuD1g8RaNQ2j_0063,CwvWvuD1g8RaNQ2j,now open the saved file
+208,288.0,295.0,adenosine wrl पर right click करें open with text editor विकल्प चुनें,100356_CwvWvuD1g8RaNQ2j_0064,CwvWvuD1g8RaNQ2j,right click on adenosine wrl select open with text editor option
+209,295.0,301.0,text editor structure के बारे में सारा विवरण दर्शाता है,100356_CwvWvuD1g8RaNQ2j_0065,CwvWvuD1g8RaNQ2j,Shows all the details about the text structure editor
+210,301.0,304.0,अब page setup पर जाते हैं,100356_CwvWvuD1g8RaNQ2j_0066,CwvWvuD1g8RaNQ2j,Now go to page setup
+211,304.0,309.0,gchem3d printing के समय 300 dpi resolution उपयोग करता है,100356_CwvWvuD1g8RaNQ2j_0067,CwvWvuD1g8RaNQ2j,gchem3d uses 300 dpi resolution when printing
+212,309.0,314.0,पेज setup properties gchempaint में properties के समान ही है,100356_CwvWvuD1g8RaNQ2j_0068,CwvWvuD1g8RaNQ2j,The page setup properties is the same as properties in gchempaint
+213,314.0,319.0,इस क्रम में gchempaint tutorials में मैंने पहले ही विचार किया था,100356_CwvWvuD1g8RaNQ2j_0069,CwvWvuD1g8RaNQ2j,In gchempaint tutorials I already considered in this sequence
+214,319.0,321.0,मैं window close करुँगी,100356_CwvWvuD1g8RaNQ2j_0070,CwvWvuD1g8RaNQ2j,i will close the window
+215,321.0,325.0,अब view menu पर जाएँ,100356_CwvWvuD1g8RaNQ2j_0071,CwvWvuD1g8RaNQ2j,now go to view menu
+216,325.0,327.0,view menu select करें,100356_CwvWvuD1g8RaNQ2j_0072,CwvWvuD1g8RaNQ2j,select view menu
+217,327.0,332.0,gchem3d निम्न चार model types उपयोग करके एक अणु प्रदर्शित करता है:,100356_CwvWvuD1g8RaNQ2j_0073,CwvWvuD1g8RaNQ2j,gchem3d displays a molecule using the following four model types:
+218,332.0,335.0,balls and sticks balls and sticks * space filling space filling,100356_CwvWvuD1g8RaNQ2j_0074,CwvWvuD1g8RaNQ2j,balls and sticks balls and sticks * space filling space filling
+219,335.0,339.0,cylinders cylinders और * wireframe wireframe,100356_CwvWvuD1g8RaNQ2j_0075,CwvWvuD1g8RaNQ2j,cylinders cylinders और * wireframe wireframe
+220,339.0,342.0,balls and sticks default model है,100356_CwvWvuD1g8RaNQ2j_0076,CwvWvuD1g8RaNQ2j,balls and sticks default model है
+221,342.0,348.0,इस model को उपयोग करके multiple bond और correct bond स्थितियों को देखे जा सकते हैं,100356_CwvWvuD1g8RaNQ2j_0077,CwvWvuD1g8RaNQ2j,Multiple bond and correct bond situations can be seen using this model.
+222,348.0,353.0,मैं space filling पर click करुँगी और आप भिन्नता देख सकते हैं,100356_CwvWvuD1g8RaNQ2j_0078,CwvWvuD1g8RaNQ2j,I'll click on space filling and you can see the difference
+223,353.0,358.0,space filling model अणुओं को compact form में दर्शाता है,100356_CwvWvuD1g8RaNQ2j_0079,CwvWvuD1g8RaNQ2j,space filling model represents molecules in compact form
+224,358.0,363.0,cylinders model structure को cylindrical pipes की form में दर्शाता है,100356_CwvWvuD1g8RaNQ2j_0080,CwvWvuD1g8RaNQ2j,cylinders model shows the structure in the form of cylindrical pipes
+225,363.0,368.0,wireframe model structure का ढांचा दर्शाता है,100356_CwvWvuD1g8RaNQ2j_0081,CwvWvuD1g8RaNQ2j,Wireframe shows the structure of the model structure
+226,368.0,371.0,balls and sticks पर वापस आते हैं,100356_CwvWvuD1g8RaNQ2j_0082,CwvWvuD1g8RaNQ2j,back to balls and sticks
+227,371.0,374.0,अब हम background color पर जाते हैं,100356_CwvWvuD1g8RaNQ2j_0083,CwvWvuD1g8RaNQ2j,Now we go to background color
+228,374.0,377.0,default background color ब्लैक है,100356_CwvWvuD1g8RaNQ2j_0084,CwvWvuD1g8RaNQ2j,default background color is black
+229,377.0,381.0,view menu select करें background color पर जाएँ,100356_CwvWvuD1g8RaNQ2j_0085,CwvWvuD1g8RaNQ2j,go to view menu select background color
+230,381.0,383.0,एक menu खुलता है,100356_CwvWvuD1g8RaNQ2j_0086,CwvWvuD1g8RaNQ2j,a menu opens
+231,383.0,386.0,menu के अंत से custom color select करें,100356_CwvWvuD1g8RaNQ2j_0087,CwvWvuD1g8RaNQ2j,select custom color from the bottom of the menu
+232,386.0,390.0,background colour window खुलती है,100356_CwvWvuD1g8RaNQ2j_0088,CwvWvuD1g8RaNQ2j,background color window opens
+233,390.0,395.0,जो हम चाहते हैं उस रंग को चुनने के लिए यह window अनेक क्षेत्र रखती है,100356_CwvWvuD1g8RaNQ2j_0089,CwvWvuD1g8RaNQ2j,This window has several fields to choose the color we want.
+234,395.0,399.0,ह्यू hue उपयोग करके hue background color बदल सकते हैं,100356_CwvWvuD1g8RaNQ2j_0090,CwvWvuD1g8RaNQ2j,hue background color can be changed using hue hue
+235,399.0,405.0,scroller पर click करें color circle की value और गतिविधि में बदलाव देखें,100356_CwvWvuD1g8RaNQ2j_0091,CwvWvuD1g8RaNQ2j,Click on the scroller to see the color circle's value and activity change.
+236,405.0,411.0,saturation saturation उपयोग करके हम color की कान्सन्ट्रेशन बदल सकते हैं,100356_CwvWvuD1g8RaNQ2j_0092,CwvWvuD1g8RaNQ2j,We can change the concentration of color by using saturation
+237,411.0,419.0,value उपयोग करके समान color के भिन्न shades प्राप्त करने के लिए rgb combination बदल सकते हैं,100356_CwvWvuD1g8RaNQ2j_0093,CwvWvuD1g8RaNQ2j,You can change the rgb combination to get different shades of the same color using value
+238,419.0,424.0,इसके आगे एक eyedropper eyedropper icon के साथ प्रीव्यू box है,100356_CwvWvuD1g8RaNQ2j_0094,CwvWvuD1g8RaNQ2j,Next to it is a preview box with an eyedropper eyedropper icon
+239,424.0,427.0,eyedropper icon पर click करें,100356_CwvWvuD1g8RaNQ2j_0095,CwvWvuD1g8RaNQ2j,click on the eyedropper icon
+240,427.0,431.0,अपने महत्व का color चुनने के लिए color ring पर कहीं भी click करें,100356_CwvWvuD1g8RaNQ2j_0096,CwvWvuD1g8RaNQ2j,Click anywhere on the color ring to choose the color of your importance
+241,431.0,438.0,ok button पर click करें screen पर background color बदल जाता है,100356_CwvWvuD1g8RaNQ2j_0097,CwvWvuD1g8RaNQ2j,click on the ok button the background color changes on the screen
+242,438.0,440.0,अब सारांशित करते हैं कि हमने क्या सीखा,100356_CwvWvuD1g8RaNQ2j_0098,CwvWvuD1g8RaNQ2j,Now let's summarize what we learned
+243,440.0,443.0,इस tutorial में हमने निम्न के बारे में सीखा,100356_CwvWvuD1g8RaNQ2j_0099,CwvWvuD1g8RaNQ2j,In this tutorial we learned about the following
+244,443.0,446.0,भिन्न menus file type formats,100356_CwvWvuD1g8RaNQ2j_0100,CwvWvuD1g8RaNQ2j,Different menus file type formats
+245,446.0,450.0,model types और background color कैसे बदलें,100356_CwvWvuD1g8RaNQ2j_0101,CwvWvuD1g8RaNQ2j,how to change model types and background color
+246,450.0,453.0,यहाँ एक नियत कार्य है,100356_CwvWvuD1g8RaNQ2j_0102,CwvWvuD1g8RaNQ2j,here is an assignment
+247,453.0,459.0,1 gchempaint से saccharide load करें और file को  mdl format में सेव करें,100356_CwvWvuD1g8RaNQ2j_0103,CwvWvuD1g8RaNQ2j,1 load saccharide with gchempaint and save the file in mdl format
+248,459.0,462.0,2 molecules viewer मॉलेक्युल्स व्यूअर में structure खोलें,100356_CwvWvuD1g8RaNQ2j_0104,CwvWvuD1g8RaNQ2j,2 molecules viewer Open the structure in the molecules viewer
+249,462.0,466.0,3 image को png और pdf file types में सेव करें,100356_CwvWvuD1g8RaNQ2j_0105,CwvWvuD1g8RaNQ2j,3 Save the image in png and pdf file types
+250,466.0,469.0,4 अनेक background colors का प्रयास करें,100356_CwvWvuD1g8RaNQ2j_0106,CwvWvuD1g8RaNQ2j,Try 4 different background colors
+251,469.0,473.0,इस url पर उपलब्ध video देखें,100356_CwvWvuD1g8RaNQ2j_0107,CwvWvuD1g8RaNQ2j,watch video available on this url
+252,473.0,476.0,यह spoken tutorial project को सारांशित करता है,100356_CwvWvuD1g8RaNQ2j_0108,CwvWvuD1g8RaNQ2j,This summarizes the spoken tutorial project
+253,476.0,481.0,अच्छी bandwidth न मिलने पर आप इसे download करके देख सकते हैं,100356_CwvWvuD1g8RaNQ2j_0109,CwvWvuD1g8RaNQ2j,"If you do not get good bandwidth, you can download and watch it."
+254,481.0,486.0,spoken tutorial project team spoken tutorials का उपयोग करके कार्यशालाएं चलाती है,100356_CwvWvuD1g8RaNQ2j_0110,CwvWvuD1g8RaNQ2j,The spoken tutorial project team conducts workshops using spoken tutorials
+255,486.0,490.0,online test pass करने वालों को प्रमाणपत्र देते हैं,100356_CwvWvuD1g8RaNQ2j_0111,CwvWvuD1g8RaNQ2j,Certificates are given to those who pass the online test
+256,490.0,497.0,अधिक जानकारी के लिए कृपया contact @spokentutorial org को लिखें,100356_CwvWvuD1g8RaNQ2j_0112,CwvWvuD1g8RaNQ2j,For more details please write to contact @spokentutorial org
+257,497.0,502.0,spoken tutorial project talktoa teacher project का हिस्सा है,100356_CwvWvuD1g8RaNQ2j_0113,CwvWvuD1g8RaNQ2j,spoken tutorial project is part of talktoa teacher project
+258,502.0,509.0,यह भारत सरकार के एमएचआरडी के आईसीटी के माध्यम से राष्ट्रीय साक्षरता mission द्वारा समर्थित है,100356_CwvWvuD1g8RaNQ2j_0114,CwvWvuD1g8RaNQ2j,"It is supported by National Mission on Literacy through ICT of MHRD, Government of India"
+259,509.0,515.0,इस mission पर अधिक जानकारी इस लिंक पर उपलब्ध है,100356_CwvWvuD1g8RaNQ2j_0115,CwvWvuD1g8RaNQ2j,More information on this mission is available at this link
+260,515.0,522.08,आई आई टी बॉम्बे से मैं श्रुति आर्य आपसे विदा लेती हूँ हमसे जुड़ने के लिए धन्यवाद,100356_CwvWvuD1g8RaNQ2j_0116,CwvWvuD1g8RaNQ2j,"I bid farewell to you, Shruti Arya from IIT Bombay. Thank you for joining us."
+261,1.0,8.0,नमस्कार kturtle में question glues पर spoken tutorial में आपका स्वागत है,102503_gspRPYL3gCI1FC36_0000,gspRPYL3gCI1FC36,Hello and welcome to spoken tutorial on question glues in kturtle
+262,8.0,16.0,इस tutorial में हम निम्न question glues क्वेशन glues and not सीखेंगे,102503_gspRPYL3gCI1FC36_0001,gspRPYL3gCI1FC36,In this tutorial we will learn the following question glues and not
+263,16.0,29.0,इस tutorial को record करने के लिए मैं उबंटु लिनक्स os वर्ज़न 1204 और kturtle वर्ज़न 081 बीटा का उपयोग कर रही हूँ,102503_gspRPYL3gCI1FC36_0002,gspRPYL3gCI1FC36,I am using ubuntu linux os version 1204 and kturtle version 081 beta to record this tutorial
+264,29.0,39.0,हम मानते हैं कि आपको kturtle के कार्य का बुनियादी और kturtle में ifelse statement का ज्ञान है,102503_gspRPYL3gCI1FC36_0003,gspRPYL3gCI1FC36,We assume that you have basic working knowledge of kturtle and ifelse statement in kturtle
+265,39.0,46.0,यदि नहीं तो संबंधित tutorials के लिए कृपया हमारी website,102503_gspRPYL3gCI1FC36_0004,gspRPYL3gCI1FC36,If not then please visit our website for related tutorials
+266,46.0,51.0,आगे बढ़ने से पहले मैं question glue शब्दों के बारे में समझाती हूँ,102503_gspRPYL3gCI1FC36_0005,gspRPYL3gCI1FC36,Before going ahead let me explain about question glue words
+267,51.0,60.0,question glue शब्द हमें छोटे क्वेशन को एक बड़े क्वेशन में glue करने के लिए सक्षम बनाते हैं,102503_gspRPYL3gCI1FC36_0006,gspRPYL3gCI1FC36,question glue words enable us to glue smaller questions into one larger question
+268,60.0,71.0,and or और not कुछ glue शब्द हैं glue शब्द ifelse conditions के साथ एकसाथ उपयोगी होते हैं,102503_gspRPYL3gCI1FC36_0007,gspRPYL3gCI1FC36,and or and not are some glue words. glue words are useful together with ifelse conditions.
+269,71.0,75.0,अब नया kturtle application खोलते हैं,102503_gspRPYL3gCI1FC36_0008,gspRPYL3gCI1FC36,Now open a new kurtle application
+270,75.0,78.0,dash home पर click करें,102503_gspRPYL3gCI1FC36_0009,gspRPYL3gCI1FC36,click on dash home
+271,78.0,82.0,search bar में kturtle type करें,102503_gspRPYL3gCI1FC36_0010,gspRPYL3gCI1FC36,type kurtle in the search bar
+272,82.0,84.0,और option पर click करें,102503_gspRPYL3gCI1FC36_0011,gspRPYL3gCI1FC36,and click on option
+273,84.0,88.0,अब glue शब्द and के साथ tutorial शुरू करते हैं,102503_gspRPYL3gCI1FC36_0012,gspRPYL3gCI1FC36,Now let's start the tutorial with glue word and
+274,88.0,93.0,मेरे पास text editor में program पहले से ही है,102503_gspRPYL3gCI1FC36_0013,gspRPYL3gCI1FC36,I already have the program in the text editor
+275,93.0,100.0,मैं text editor से code copy करके kturtle editor में paste करती हूँ,102503_gspRPYL3gCI1FC36_0014,gspRPYL3gCI1FC36,I copy the code from text editor and paste it in kturtle editor
+276,100.0,106.0,कृपया यहाँ tutorial रोकें और अपने kturtle editor में program type करें,102503_gspRPYL3gCI1FC36_0015,gspRPYL3gCI1FC36,Please stop the tutorial here and type program in your kurtle editor
+277,106.0,110.0,program टाइप करने के बाद tutorial पुनः आरंभ करें,102503_gspRPYL3gCI1FC36_0016,gspRPYL3gCI1FC36,restart tutorial after typing program
+278,110.0,112.0,मैं program text को zoom करती हूँ,102503_gspRPYL3gCI1FC36_0017,gspRPYL3gCI1FC36,i zoom program text
+279,112.0,116.0,यह थोड़ा धुंधला हो सकता है,102503_gspRPYL3gCI1FC36_0018,gspRPYL3gCI1FC36,it might be a little hazy
+280,116.0,119.0,code को देखें,102503_gspRPYL3gCI1FC36_0019,gspRPYL3gCI1FC36,refer to the code
+281,119.0,124.0,reset command turtle को default position में sets करती है,102503_gspRPYL3gCI1FC36_0020,gspRPYL3gCI1FC36,reset command sets turtle to default position
+282,124.0,130.0,keyword message के बाद program में message दोहरे उद्धरणचिन्हों में दिया गया है,102503_gspRPYL3gCI1FC36_0021,gspRPYL3gCI1FC36,The message in the program is given in double quotes after the keyword message.
+283,130.0,134.0,message command string को input के रूप में लेती है,102503_gspRPYL3gCI1FC36_0022,gspRPYL3gCI1FC36,takes message command string as input
+284,134.0,144.0,यह string से text सम्मिलित करते हुए एक popअप dialog box प्रदर्शित करता है और non null strings के लिए एक beep करता है,102503_gspRPYL3gCI1FC36_0023,gspRPYL3gCI1FC36,It displays a popup dialog box inserting text from the string and beeps for non null strings.
+285,144.0,150.0,$a $b और $c variables हैं जो यूजर input संचित करते हैं,102503_gspRPYL3gCI1FC36_0024,gspRPYL3gCI1FC36,$a $b and $c are variables that store user input
+286,150.0,156.0,ask command variables में संचित होने वाले यूजर input के लिए prompts करती है,102503_gspRPYL3gCI1FC36_0025,gspRPYL3gCI1FC36,The ask command prompts for user input to be stored in variables.
+287,156.0,169.0,if $a + $b> $c और $b + $c> $a और $c + $a> $b if condition को checks करता है,102503_gspRPYL3gCI1FC36_0026,gspRPYL3gCI1FC36,if $a + $b> $c and $b + $c> $a and $c + $a> $b checks the if condition
+288,169.0,175.0,जब दो glued क्वेशन and के साथ true होते हैं तो परिणाम true होता है,102503_gspRPYL3gCI1FC36_0027,gspRPYL3gCI1FC36,When two glued queries together with and are true then the result is true
+289,175.0,185.0,if $a ! = $b और $a ! = $c और $a ! = $a if condition को checks करता है,102503_gspRPYL3gCI1FC36_0028,gspRPYL3gCI1FC36,if $ a ! = $b and $a ! = $c and $a ! = $a checks the if condition
+290,185.0,192.0,जब if condition true से ऊपर होती है control nested if block में स्थानांतरित होता है,102503_gspRPYL3gCI1FC36_0029,gspRPYL3gCI1FC36,When the if condition is above true the control is transferred to the nested if block
+291,192.0,197.0,यह checks करता है कि यदि त्रिकोण के भाग असमान हैं,102503_gspRPYL3gCI1FC36_0030,gspRPYL3gCI1FC36,Checks if the sides of the triangle are unequal
+292,197.0,202.0,fontsize 18 print command द्वारा उपयोगित font size को sets करता है,102503_gspRPYL3gCI1FC36_0031,gspRPYL3gCI1FC36,fontsize 18 sets the font size used by the print command
+293,202.0,215.0,go 10100 turtle को canvas के बाएँ से 10 pixels और canvas के ऊपरी ओर से 100 pixels स्थानांतरित होने के लिए नियंत्रित करता है,102503_gspRPYL3gCI1FC36_0032,gspRPYL3gCI1FC36,go 10100 controls the turtle to move 10 pixels from the left of the canvas and 100 pixels from the top of the canvas
+294,215.0,221.0,print command if condition की checking के बाद string दर्शाती है,102503_gspRPYL3gCI1FC36_0033,gspRPYL3gCI1FC36,print command shows string after checking if condition
+295,221.0,228.0,else command else condition को checks करती है जब if condition block में false हो,102503_gspRPYL3gCI1FC36_0034,gspRPYL3gCI1FC36,else command checks the else condition when the if condition is false in the block
+296,228.0,234.0,print command else condition की checking के बाद string दर्शाती है,102503_gspRPYL3gCI1FC36_0035,gspRPYL3gCI1FC36,print command displays the string after checking the else condition
+297,234.0,237.0,else command आखिरी condition को checks करती है,102503_gspRPYL3gCI1FC36_0036,gspRPYL3gCI1FC36,else command checks the last condition
+298,237.0,243.0,यहाँ else checked होती है जब उपर्युक्त conditions false होती हैं,102503_gspRPYL3gCI1FC36_0037,gspRPYL3gCI1FC36,Here else is checked when the above condition is false.
+299,243.0,252.0,print command else condition की checking के बाद string दर्शाती है मैं सभी conditions को check करने के लिए code रन करूँगी,102503_gspRPYL3gCI1FC36_0038,gspRPYL3gCI1FC36,print command after checking the else condition shows the string i will run the code to check all the conditions
+300,252.0,255.0,program रन करने के लिए run button पर click करें,102503_gspRPYL3gCI1FC36_0039,gspRPYL3gCI1FC36,Click on run button to run the program
+301,255.0,260.0,एक message dialog box popsअप होता है अब ok पर click करें,102503_gspRPYL3gCI1FC36_0040,gspRPYL3gCI1FC36,"A message dialog box pops up, now click on ok"
+302,260.0,265.0,ab की लंबाई के लिए 5 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0041,gspRPYL3gCI1FC36,Enter 5 for the length of ab and click ok
+303,265.0,269.0,bc की लंबाई के लिए 8 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0042,gspRPYL3gCI1FC36,Enter 8 for the length of bc and click ok
+304,269.0,273.0,ac की लंबाई के लिए 9 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0043,gspRPYL3gCI1FC36,Enter 9 for the length of ac and click on ok
+305,273.0,277.0,a scalene triangle canvas पर प्रदर्शित होता है,102503_gspRPYL3gCI1FC36_0044,gspRPYL3gCI1FC36,a scalene triangle displayed on a canvas
+306,277.0,280.0,फिर से रन करें,102503_gspRPYL3gCI1FC36_0045,gspRPYL3gCI1FC36,run again
+307,280.0,284.0,एक message dialog box popsअप होता है ok पर click करें,102503_gspRPYL3gCI1FC36_0046,gspRPYL3gCI1FC36,"A message dialog box pops up, click on ok"
+308,284.0,298.0,ab ab की लंबाई के लिए 5 प्रविष्ट करें और ok पर click करें bc की लंबाई के लिए 6 प्रविष्ट करें और ok पर click करें ac की लंबाई के लिए 6 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0047,gspRPYL3gCI1FC36,ab enter 5 for the length of ab and click ok enter 6 for the length of bc and click ok enter 6 for the length of ac and click ok
+309,298.0,302.0, not a scalene triangle canvas पर प्रदर्शित होता है,102503_gspRPYL3gCI1FC36_0048,gspRPYL3gCI1FC36,not a scalene triangle is displayed on the canvas
+310,302.0,306.0,default condition को check करने के लिए फिर से रन करें,102503_gspRPYL3gCI1FC36_0049,gspRPYL3gCI1FC36,run again to check the default condition
+311,306.0,311.0,एक message dialog box popsअप होता है ok पर click करें,102503_gspRPYL3gCI1FC36_0050,gspRPYL3gCI1FC36,"A message dialog box pops up, click on ok"
+312,311.0,316.0,ab ab की लंबाई के लिए 1 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0051,gspRPYL3gCI1FC36,Enter 1 for the length of ab ab and click ok
+313,316.0,320.0,bc की लंबाई के लिए 1 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0052,gspRPYL3gCI1FC36,Enter 1 for the length of bc and click ok
+314,320.0,324.0,ac की लंबाई के लिए 2 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0053,gspRPYL3gCI1FC36,enter 2 for the length of ac and click ok
+315,324.0,330.0,does not satisfy triangle s inequality canvas पर प्रदर्शित होता है,102503_gspRPYL3gCI1FC36_0054,gspRPYL3gCI1FC36,does not satisfy triangle s inequality displayed on the canvas
+316,330.0,340.0,अब इस program को हटा दें मैं clear command type करती हूँ और canvas को साफ करने के लिए clear command रन करती हूँ,102503_gspRPYL3gCI1FC36_0055,gspRPYL3gCI1FC36,Now remove this program I type clear command and run clear command to clear the canvas
+317,340.0,343.0,आगे not condition के साथ कार्य करें,102503_gspRPYL3gCI1FC36_0056,gspRPYL3gCI1FC36,work ahead with not condition
+318,343.0,351.0,मैं text editor से program copy करती हूँ और इसे kturtle editor में paste करती हूँ,102503_gspRPYL3gCI1FC36_0057,gspRPYL3gCI1FC36,I copy the program from text editor and paste it in kturtle editor
+319,351.0,356.0,कृपया यहाँ tutorial रोकें और अपने kturtle editor में program type करें,102503_gspRPYL3gCI1FC36_0058,gspRPYL3gCI1FC36,Please stop the tutorial here and type program in your kurtle editor
+320,356.0,361.0,program टाइप करने के बाद tutorial पुनः आरंभ करें,102503_gspRPYL3gCI1FC36_0059,gspRPYL3gCI1FC36,restart tutorial after typing program
+321,361.0,365.0,मैं program text को zoom करती हूँ और program समझाती हूँ,102503_gspRPYL3gCI1FC36_0060,gspRPYL3gCI1FC36,I zoom in on the program text and explain the program
+322,365.0,369.0,reset command turtle को default position में sets करती है,102503_gspRPYL3gCI1FC36_0061,gspRPYL3gCI1FC36,reset command sets turtle to default position
+323,369.0,375.0,$a $b और $c variables हैं जो यूजर input को संचित करते हैं,102503_gspRPYL3gCI1FC36_0062,gspRPYL3gCI1FC36,$a $b and $c are variables that store user input
+324,375.0,387.0,if not $a = = $b और $b = = $c और $c = = $a if not condition को checks करता है,102503_gspRPYL3gCI1FC36_0063,gspRPYL3gCI1FC36,if not $a = = $b and $b = = $c and $c = = $a checks the if not condition
+325,387.0,396.0,not एक विशिष्ट क्वेशन glue शब्द है यह इसके operand के logical state को उल्टा करता है,102503_gspRPYL3gCI1FC36_0064,gspRPYL3gCI1FC36,not is a special query glue word that inverts the logical state of its operand
+326,396.0,402.0,उदाहरणस्वरूप यदि दी गई condition true है not false बनाता है,102503_gspRPYL3gCI1FC36_0065,gspRPYL3gCI1FC36,For example if given condition is true then not false makes
+327,402.0,408.0,और जब condition false होती है output true होगा,102503_gspRPYL3gCI1FC36_0066,gspRPYL3gCI1FC36,and when the condition is false the output will be true
+328,408.0,415.0,print command if not condition की checking के बाद string प्रदर्शित करती है,102503_gspRPYL3gCI1FC36_0067,gspRPYL3gCI1FC36,print command displays string after checking if not condition
+329,415.0,421.0,else command निष्पादित होती है जब if condition false होती है,102503_gspRPYL3gCI1FC36_0068,gspRPYL3gCI1FC36,else command is executed when if condition is false
+330,421.0,427.0,print command else condition की checking के बाद string प्रदर्शित करती है,102503_gspRPYL3gCI1FC36_0069,gspRPYL3gCI1FC36,print command displays the string after checking the else condition
+331,427.0,440.0,go 100100 turtle को canvas के बाएँ से 100 pixels और canvas के ऊपरी ओर से 100 pixels स्थानांतरित करता है,102503_gspRPYL3gCI1FC36_0070,gspRPYL3gCI1FC36,go 100100 moves the turtle 100 pixels to the left of the canvas and 100 pixels to the top of the canvas
+332,440.0,452.0,repeat 3 {turnright 120 forward 100} canvas पर एक समभुज त्रिकोण बनाने के लिए turtle को अनुमति देता है,102503_gspRPYL3gCI1FC36_0071,gspRPYL3gCI1FC36,repeat 3 {turnright 120 forward 100} allows the turtle to draw an equilateral triangle on the canvas
+333,452.0,456.0,सभी conditions को check करने के लिए मैं program रन करती हूँ,102503_gspRPYL3gCI1FC36_0072,gspRPYL3gCI1FC36,I run the program to check all the conditions
+334,456.0,460.0,code को रन करने के लिए f5 की दबाएँ,102503_gspRPYL3gCI1FC36_0073,gspRPYL3gCI1FC36,press f5 key to run the code
+335,460.0,465.0,ab की लंबाई के लिए 6 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0074,gspRPYL3gCI1FC36,Enter 6 for the length of ab and click on ok
+336,465.0,468.0,bc की लंबाई के लिए 5 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0075,gspRPYL3gCI1FC36,Enter 5 for the length of bc and click ok
+337,468.0,474.0,ac की लंबाई के लिए 7 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0076,gspRPYL3gCI1FC36,Enter 7 for the length of ac and click on ok
+338,474.0,478.0,triangle is not equilateral canvas पर प्रदर्शित होता है,102503_gspRPYL3gCI1FC36_0077,gspRPYL3gCI1FC36,triangle is not equilateral displayed on the canvas
+339,478.0,485.0,फिर से रन करें ab की लंबाई के लिए 5 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0078,gspRPYL3gCI1FC36,run again enter 5 for the length of ab and click ok
+340,485.0,489.0,bc की लंबाई के लिए 5 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0079,gspRPYL3gCI1FC36,Enter 5 for the length of bc and click ok
+341,489.0,493.0,ac की लंबाई के लिए 5 प्रविष्ट करें और ok पर click करें,102503_gspRPYL3gCI1FC36_0080,gspRPYL3gCI1FC36,enter 5 for the length of ac and click ok
+342,493.0,501.0,triangle is equilateral canvas पर प्रदर्शित होता है एक समभुज त्रिकोण canvas पर बन गया है,102503_gspRPYL3gCI1FC36_0081,gspRPYL3gCI1FC36,triangle is equilateral canvas
+343,501.0,505.0,इसी के साथ हम इस tutorial की समाप्ति की ओर आ गये हैं,102503_gspRPYL3gCI1FC36_0082,gspRPYL3gCI1FC36,With this we have come to the end of this tutorial.
+344,505.0,508.0,संक्षेप में,102503_gspRPYL3gCI1FC36_0083,gspRPYL3gCI1FC36,in short
+345,508.0,515.0,इस tutorial में हमने क्वेशन glues and not के बारे में सीखा,102503_gspRPYL3gCI1FC36_0084,gspRPYL3gCI1FC36,In this tutorial we learned about the question glues and not
+346,515.0,520.0,एक नियतकार्य के रूप में मैं चाहती हूँ कि निर्धारित करने के लिए program लिखें,102503_gspRPYL3gCI1FC36_0085,gspRPYL3gCI1FC36,As an assignment I want to write a program to determine
+347,520.0,528.0,क्वेशन glue or का उपयोग करके समकोण त्रिभुज के लिए कोण अवधारणा,102503_gspRPYL3gCI1FC36_0086,gspRPYL3gCI1FC36,Angle concepts for a right angled triangle using glue or
+348,528.0,531.0,if or condition की संरचना,102503_gspRPYL3gCI1FC36_0087,gspRPYL3gCI1FC36,structure of if or condition
+349,531.0,539.0,if within brackets condition or within brackets condition or within brackets condition,102503_gspRPYL3gCI1FC36_0088,gspRPYL3gCI1FC36,if within brackets condition or within brackets condition or within brackets condition
+350,539.0,542.0,within curly brackets do something,102503_gspRPYL3gCI1FC36_0089,gspRPYL3gCI1FC36,within curly brackets do something
+351,542.0,546.0,else within curly brackets do something,102503_gspRPYL3gCI1FC36_0090,gspRPYL3gCI1FC36,else within curly brackets do something
+352,546.0,550.0,इस लिंक पर उपलब्ध video देखें,102503_gspRPYL3gCI1FC36_0091,gspRPYL3gCI1FC36,Watch the video available on this link
+353,550.0,553.0,यह spoken tutorial project को सारांशित करता है,102503_gspRPYL3gCI1FC36_0092,gspRPYL3gCI1FC36,This summarizes the spoken tutorial project
+354,553.0,558.0,यदि आपके पास अच्छी bandwidth नहीं है तो आप इसे download करके देख सकते हैं,102503_gspRPYL3gCI1FC36_0093,gspRPYL3gCI1FC36,If you do not have good bandwidth then you can download and watch it.
+355,558.0,560.0,spoken tutorial project team:,102503_gspRPYL3gCI1FC36_0094,gspRPYL3gCI1FC36,spoken tutorial project team:
+356,560.0,563.0,spoken tutorials का उपयोग करके कार्यशालाएँ भी चलाती है,102503_gspRPYL3gCI1FC36_0095,gspRPYL3gCI1FC36,also conducts workshops using spoken tutorials
+357,563.0,567.0,जो online test pass करते हैं उन्हें प्रमाणपत्र भी देते हैं,102503_gspRPYL3gCI1FC36_0096,gspRPYL3gCI1FC36,Certificates are also given to those who pass the online test.
+358,567.0,574.0,अधिक जानकारी के लिए contact @spokentutorial org पर लिखें,102503_gspRPYL3gCI1FC36_0097,gspRPYL3gCI1FC36,For more information write to contact @spokentutorial org
+359,574.0,578.0,spoken tutorial project talktoa teacher project का हिस्सा है,102503_gspRPYL3gCI1FC36_0098,gspRPYL3gCI1FC36,spoken tutorial project is part of talktoa teacher project
+360,578.0,584.0,यह भारत सरकार के एमएचआरडी के आईसीटी के माध्यम से राष्ट्रीय साक्षरता mission द्वारा समर्थित है,102503_gspRPYL3gCI1FC36_0099,gspRPYL3gCI1FC36,"It is supported by National Mission on Literacy through ICT of MHRD, Government of India"
+361,584.0,589.0,इस mission पर अधिक जानकारी निम्न लिंक पर उपलब्ध है,102503_gspRPYL3gCI1FC36_0100,gspRPYL3gCI1FC36,More information on this mission is available at the following link
+362,589.0,595.1,यह स्क्रिप्ट देवेन्द्र कैरवान द्वारा अनुवादित है आई आई टी बॉम्बे की ओर से मैं श्रुति आर्य आपसे विदा लेती हूँ धन्यवाद,102503_gspRPYL3gCI1FC36_0101,gspRPYL3gCI1FC36,This script is translated by Devendra Kairav ​​On behalf of IIT Bombay I Shruti Arya bid you farewell Thank you
+363,1.0,7.0,jmol में crystal structure and unit cell पर स्पोकन tutorial में आपका स्वागत है,104662_SCzcMyA64dLtPMMJ_0000,SCzcMyA64dLtPMMJ,Welcome to the spoken tutorial on crystal structure and unit cell in jmol
+364,7.0,17.0,इस tutorial में हम निम्न करना सीखेंगे crystallography open database से cif यानि crystallographic information file को download करना,104662_SCzcMyA64dLtPMMJ_0001,SCzcMyA64dLtPMMJ,In this tutorial we will learn how to download cif ie crystallographic information file from crystallography open database
+365,17.0,20.0,jmol में cif को खोलना,104662_SCzcMyA64dLtPMMJ_0002,SCzcMyA64dLtPMMJ,opening cif in jmol
+366,20.0,25.0,jmol panel पर unit cell और unit cell parameters को दिखाना,104662_SCzcMyA64dLtPMMJ_0003,SCzcMyA64dLtPMMJ,display unit cell and unit cell parameters on jmol panel
+367,25.0,34.0,और विभिन्न crystal systems के crystal structures को दिखाना उदाहरण के लिए cubic hexagonal और rhombohedral,104662_SCzcMyA64dLtPMMJ_0004,SCzcMyA64dLtPMMJ,and showing crystal structures of different crystal systems for example cubic hexagonal and rhombohedral
+368,34.0,39.0,इस tutorial के अनुसरण के लिए आपको high school chemistry का ज्ञान होना चाहिए,104662_SCzcMyA64dLtPMMJ_0005,SCzcMyA64dLtPMMJ,You must have knowledge of high school chemistry to follow this tutorial
+369,39.0,42.0,और jmol window की कार्यविधि से परिचित होना चाहिए,104662_SCzcMyA64dLtPMMJ_0006,SCzcMyA64dLtPMMJ,and should be familiar with the working of jmol window
+370,42.0,48.0,यदि नहीं तो सम्बंधित tutorials के लिए कृपया हमारी website पर जाएँ,104662_SCzcMyA64dLtPMMJ_0007,SCzcMyA64dLtPMMJ,If not then please visit our website for related tutorials
+371,48.0,54.0,इस tutorial को record करने के लिए मैं प्रयोग कर रही हूँ ubuntu operating system version 1404,104662_SCzcMyA64dLtPMMJ_0008,SCzcMyA64dLtPMMJ,I am using ubuntu operating system version 1404 to record this tutorial
+372,54.0,57.0,jmol version 12232,104662_SCzcMyA64dLtPMMJ_0009,SCzcMyA64dLtPMMJ,jmol version 12232
+373,57.0,61.0,java version 7 और,104662_SCzcMyA64dLtPMMJ_0010,SCzcMyA64dLtPMMJ,java version 7 and
+374,61.0,64.0,mozilla firefox browser 350,104662_SCzcMyA64dLtPMMJ_0011,SCzcMyA64dLtPMMJ,mozilla firefox browser 350
+375,64.0,68.0,crystal structures सात crystal systems के अंतर्गत grouped किये जाते हैं,104662_SCzcMyA64dLtPMMJ_0012,SCzcMyA64dLtPMMJ,Crystal structures are grouped under seven crystal systems
+376,68.0,74.0,यह table crystal systems और उनके सम्बंधित lattice parameters की सूची दिखाती है,104662_SCzcMyA64dLtPMMJ_0013,SCzcMyA64dLtPMMJ,This table shows a list of crystal systems and their associated lattice parameters.
+377,74.0,80.0,अनेक compounds और minerals के crystals के लिए उदाहरण यहाँ सूचीबद्ध हैं,104662_SCzcMyA64dLtPMMJ_0014,SCzcMyA64dLtPMMJ,Examples for crystals of many compounds and minerals are listed here.
+378,80.0,87.0,हम jmol panel पर sodium chloride graphite और calcite के crystal structures दिखाएँगे,104662_SCzcMyA64dLtPMMJ_0015,SCzcMyA64dLtPMMJ,We will show crystal structures of sodium chloride graphite and calcite on jmol panel
+379,87.0,91.0,jmol panel पर crystal structure दिखाने के लिए:,104662_SCzcMyA64dLtPMMJ_0016,SCzcMyA64dLtPMMJ,To display the crystal structure on the jmol panel:
+380,91.0,97.0,हमें एक विशेष crystal के लिए crystallographic information file download करने की ज़रुरत है,104662_SCzcMyA64dLtPMMJ_0017,SCzcMyA64dLtPMMJ,We need to download the crystallographic information file for a particular crystal
+381,97.0,103.0,cif crystallographic इंफॉर्मेशन को दिखाने के लिए एक standard text file format है,104662_SCzcMyA64dLtPMMJ_0018,SCzcMyA64dLtPMMJ,cif is a standard text file format for representing crystallographic information.
+382,103.0,108.0,cif format  cif file extension रखता है,104662_SCzcMyA64dLtPMMJ_0019,SCzcMyA64dLtPMMJ,cif format keeps cif file extension
+383,108.0,113.0,crystallography open database एक open access database है,104662_SCzcMyA64dLtPMMJ_0020,SCzcMyA64dLtPMMJ,crystallography open database एक open access database है
+384,113.0,118.0,downloadable होने वाला cif cod website पर उपलब्ध है,104662_SCzcMyA64dLtPMMJ_0021,SCzcMyA64dLtPMMJ,downloadable cif code is available on website
+385,118.0,123.0,website the गए link से accessed की जा सकती है,104662_SCzcMyA64dLtPMMJ_0022,SCzcMyA64dLtPMMJ,The website can be accessed from the given link
+386,123.0,130.0,अब cod database website खोलते हैं और कुछ cif files download करते हैं,104662_SCzcMyA64dLtPMMJ_0023,SCzcMyA64dLtPMMJ,Now open cod database website and download some cif files
+387,130.0,133.0,यहाँ मैंने cod website खोल ली है,104662_SCzcMyA64dLtPMMJ_0024,SCzcMyA64dLtPMMJ,Here I have opened the code website
+388,133.0,139.0,पेज के बायीं तरफ जानकारी अनेक शीर्षकों में विभाजित की जाती है,104662_SCzcMyA64dLtPMMJ_0025,SCzcMyA64dLtPMMJ,Information is divided into several headings on the left side of the page.
+389,139.0,147.0,accessing cod data शीर्षक में उपशीर्षक हैं जैसे browse search आदि,104662_SCzcMyA64dLtPMMJ_0026,SCzcMyA64dLtPMMJ,The title accessing cod data has subheadings like browse search etc.
+390,147.0,151.0,search विकल्प पर click करें एक नया पेज खुलता है,104662_SCzcMyA64dLtPMMJ_0027,SCzcMyA64dLtPMMJ,Click on search option a new page opens
+391,151.0,156.0,search पेज पर हमें cif files के लिए अनेक विकल्प मिलते हैं,104662_SCzcMyA64dLtPMMJ_0028,SCzcMyA64dLtPMMJ,On search page we get many options for cif files
+392,156.0,166.0,hints and tips link पर click करें,104662_SCzcMyA64dLtPMMJ_0029,SCzcMyA64dLtPMMJ,Click on the hints and tips link
+393,166.0,169.0,search पेज पर वापस जाएँ,104662_SCzcMyA64dLtPMMJ_0030,SCzcMyA64dLtPMMJ,Back to search page
+394,169.0,174.0,हम cod id प्रयोग करके निम्न प्रकार से crystal structure को ढूँढ सकते हैं:,104662_SCzcMyA64dLtPMMJ_0031,SCzcMyA64dLtPMMJ,We can find the crystal structure using cod id as follows:
+395,174.0,181.0,openbabel fastsearch या text box में chemical या mineral का name type करके,104662_SCzcMyA64dLtPMMJ_0032,SCzcMyA64dLtPMMJ,openbabel fastsearch or by typing the name of the chemical or mineral in the text box
+396,181.0,186.0,उदाहरण के लिए sodium chloride की cif file को ढूँढने के लिए,104662_SCzcMyA64dLtPMMJ_0033,SCzcMyA64dLtPMMJ,For example to find the cif file of sodium chloride
+397,186.0,192.0,text box में type करें halite जो sodium chloride का mineral name है,104662_SCzcMyA64dLtPMMJ_0034,SCzcMyA64dLtPMMJ,Type halite in the text box which is the mineral name of sodium chloride.
+398,192.0,195.0,elements box पर नीचे जाएँ,104662_SCzcMyA64dLtPMMJ_0035,SCzcMyA64dLtPMMJ,scroll down to the elements box
+399,195.0,200.0,type करें symbol na sodium के लिए और cl chloride के लिए,104662_SCzcMyA64dLtPMMJ_0036,SCzcMyA64dLtPMMJ,type the symbol na for sodium and cl for chloride
+400,200.0,204.0,number of distinct elements box तक नीचे जाएँ,104662_SCzcMyA64dLtPMMJ_0037,SCzcMyA64dLtPMMJ,scroll down to the number of distinct elements box
+401,204.0,209.0,यहाँ हमारे पास minimum और maximum elements type करने का विकल्प है,104662_SCzcMyA64dLtPMMJ_0038,SCzcMyA64dLtPMMJ,Here we have option to type minimum and maximum elements
+402,209.0,217.0,minimum box में type करें 2 यदि आप केवल दो elements के साथ crystal structure चाहते हैं जोकि sodium और chloride है,104662_SCzcMyA64dLtPMMJ_0039,SCzcMyA64dLtPMMJ,Type 2 in the minimum box if you want crystal structure with only two elements which are sodium and chloride.
+403,217.0,220.0,send बटन पर click करें,104662_SCzcMyA64dLtPMMJ_0040,SCzcMyA64dLtPMMJ,click on the send button
+404,220.0,225.0,sodium chloride के लिए crystal structure data files के साथ एक web पेज खुलता है,104662_SCzcMyA64dLtPMMJ_0041,SCzcMyA64dLtPMMJ,A web page opens with the crystal structure data files for sodium chloride.
+405,225.0,231.0,cod id पर right click करें और open the link in a new tab पर click करें,104662_SCzcMyA64dLtPMMJ_0042,SCzcMyA64dLtPMMJ,right click on cod id and click on open the link in a new tab
+406,231.0,237.0,यह पेज उस विशेष crystal structure से सम्बंधित विस्तृत जानकारी रखता है,104662_SCzcMyA64dLtPMMJ_0043,SCzcMyA64dLtPMMJ,This page contains detailed information related to that particular crystal structure.
+407,237.0,240.0,database web पेज पर वापस जाएँ,104662_SCzcMyA64dLtPMMJ_0044,SCzcMyA64dLtPMMJ,Back to database web page
+408,240.0,248.0,archive of cif files link पर click करें जो पेज के दायीं तरफ स्थित है,104662_SCzcMyA64dLtPMMJ_0045,SCzcMyA64dLtPMMJ,Click on the archive of cif files link which is located on the right side of the page
+409,248.0,257.0,screen पर एक dialog box खुलता है open with विकल्प चुनें ok button पर click करें,104662_SCzcMyA64dLtPMMJ_0046,SCzcMyA64dLtPMMJ,A dialog box opens on the screen select open with option click on ok button
+410,257.0,263.0,screen पर sodium chloride crystal के लिए अनेक cif files के साथ एक folder खुलता है,104662_SCzcMyA64dLtPMMJ_0047,SCzcMyA64dLtPMMJ,A folder with several cif files for sodium chloride crystal opens on the screen.
+411,263.0,268.0,जो files आप download करना चाहते हैं उन पर क्लिक करके उन्हें चुनें,104662_SCzcMyA64dLtPMMJ_0048,SCzcMyA64dLtPMMJ,Select the files you want to download by clicking on them
+412,268.0,272.0,tool bar पर extract button पर click करें,104662_SCzcMyA64dLtPMMJ_0049,SCzcMyA64dLtPMMJ,click on the extract button on the tool bar
+413,272.0,277.0,अपने system पर उचित स्थान पर files को सेव करें,104662_SCzcMyA64dLtPMMJ_0050,SCzcMyA64dLtPMMJ,Save the files to the appropriate location on your system
+414,277.0,281.0,extract पर click करें window बंद करें,104662_SCzcMyA64dLtPMMJ_0051,SCzcMyA64dLtPMMJ,click extract close window
+415,281.0,283.0,search पेज पर वापस जाएँ,104662_SCzcMyA64dLtPMMJ_0052,SCzcMyA64dLtPMMJ,Back to search page
+416,283.0,291.0,अब पहले की तरह ही समान प्रक्रिया प्रयोग करके graphite और calcite की cif files download करें,104662_SCzcMyA64dLtPMMJ_0053,SCzcMyA64dLtPMMJ,Now download the cif files of graphite and calcite using the same procedure as before
+417,291.0,295.0,अब हम jmol में sodium chloride की cif फाइल खोलेंगे,104662_SCzcMyA64dLtPMMJ_0054,SCzcMyA64dLtPMMJ,Now we will open the cif file of sodium chloride in jmol
+418,295.0,299.0,यहाँ मैंने jmol window खोल ली है,104662_SCzcMyA64dLtPMMJ_0055,SCzcMyA64dLtPMMJ,Here I have opened jmol window
+419,299.0,303.0,tool bar में open a file icon पर click करें,104662_SCzcMyA64dLtPMMJ_0056,SCzcMyA64dLtPMMJ,click on the open a file icon in the tool bar
+420,303.0,312.0,sodium chloride की cif file की location पर जाएँ जो हमने cod database से downloaded किया है,104662_SCzcMyA64dLtPMMJ_0057,SCzcMyA64dLtPMMJ,Go to the location of the cif file of sodium chloride which we have downloaded from cod database
+421,312.0,314.0,open पर click करें,104662_SCzcMyA64dLtPMMJ_0058,SCzcMyA64dLtPMMJ,click open
+422,314.0,319.0,screen पर sodium chloride crystal का unit cell खुलता है,104662_SCzcMyA64dLtPMMJ_0059,SCzcMyA64dLtPMMJ,Unit cell of sodium chloride crystal opens on the screen
+423,319.0,323.0,unit cell crystal में सबसे छोटी दोहराई जाने वाली unit है,104662_SCzcMyA64dLtPMMJ_0060,SCzcMyA64dLtPMMJ,The smallest repeating unit in a unit cell crystal is
+424,323.0,329.0,इन unit cells का 3 डाइमेंशन्स में स्टैक एक के ऊपर एक आना करना crystal structure का आधार बनाएगा,104662_SCzcMyA64dLtPMMJ_0061,SCzcMyA64dLtPMMJ,The stacking of these unit cells in 3 dimensions one above the other will form the basis of the crystal structure.
+425,329.0,332.0,jmol panel पर वापस आते हैं,104662_SCzcMyA64dLtPMMJ_0062,SCzcMyA64dLtPMMJ,come back to jmol panel
+426,332.0,337.0,unit cell से सम्बंधित data panel के बायीं तरफ प्रदर्शित होता है,104662_SCzcMyA64dLtPMMJ_0063,SCzcMyA64dLtPMMJ,The data related to the unit cell is displayed on the left side of the panel.
+427,337.0,341.0,यह space group वर्गीकरण के साथ शुरू होता है,104662_SCzcMyA64dLtPMMJ_0064,SCzcMyA64dLtPMMJ,It starts with space group classification
+428,341.0,350.0,sodium chloride cubic lattice system में आता है इसलिए vectors a b और c समान होते हैं,104662_SCzcMyA64dLtPMMJ_0065,SCzcMyA64dLtPMMJ,sodium chloride comes in cubic lattice system so vectors a b and c are equal
+429,350.0,355.0,angles alpha beta और gamma 90 degrees होते हैं,104662_SCzcMyA64dLtPMMJ_0066,SCzcMyA64dLtPMMJ,angles alpha beta and gamma are 90 degrees
+430,355.0,359.0,popअप menu खोलने के लिए right click करें,104662_SCzcMyA64dLtPMMJ_0067,SCzcMyA64dLtPMMJ,right click to open popup menu
+431,359.0,361.0,symmetry विकल्प तक नीचे जाएँ,104662_SCzcMyA64dLtPMMJ_0068,SCzcMyA64dLtPMMJ,scroll down to the symmetry option
+432,361.0,365.0,submenu में हमारे पास symmetry elements दिखाने के लिए विकल्प हैं,104662_SCzcMyA64dLtPMMJ_0069,SCzcMyA64dLtPMMJ,In the submenu we have options to show symmetry elements
+433,365.0,370.0,हम submenu में विकल्पों को प्रयोग करके unit cells के blocks को भी दिखा सकते हैं,104662_SCzcMyA64dLtPMMJ_0070,SCzcMyA64dLtPMMJ,We can also show blocks of unit cells using the options in the submenu
+434,370.0,375.0,उदाहरण के लिए reload {1 1 1} विकल्प पर click करें,104662_SCzcMyA64dLtPMMJ_0071,SCzcMyA64dLtPMMJ,For example click on reload {1 1 1} option
+435,375.0,381.0,panel पर हमारे पास unit cell block है जो face center cubic lattice दिखा रहा है,104662_SCzcMyA64dLtPMMJ_0072,SCzcMyA64dLtPMMJ,panel we have unit cell block showing face center cubic lattice
+436,381.0,389.0,display को बदलने के लिए popअप menu खोलें style तक नीचे जाएँ फिर scheme और cpk spacefill पर click करें,104662_SCzcMyA64dLtPMMJ_0073,SCzcMyA64dLtPMMJ,To change display open popup menu go down to style then click on scheme and cpk spacefill
+437,389.0,394.0,यहाँ panel पर हमारे पास crystal structure cpk display में है,104662_SCzcMyA64dLtPMMJ_0074,SCzcMyA64dLtPMMJ,Here on the panel we have the crystal structure in cpk display
+438,394.0,404.0,दोबारा popअप menu खोलें symmetry तक नीचे जाएँ और reload {4 4 4 6 6 6 1} विकल्प पर click करें,104662_SCzcMyA64dLtPMMJ_0075,SCzcMyA64dLtPMMJ,again open popup menu scroll down to symmetry and click on reload {4 4 4 6 6 6 1} option
+439,404.0,409.0,यह विकल्प jmol panel पर 27 cell block loads करता है,104662_SCzcMyA64dLtPMMJ_0076,SCzcMyA64dLtPMMJ,This option loads 27 cell blocks on jmol panel
+440,409.0,416.0,popअप menu खोलें symmetry पर जाएँ वापस reload {1 1 1} विकल्प पर जाएँ,104662_SCzcMyA64dLtPMMJ_0077,SCzcMyA64dLtPMMJ,Open popup menu Go to symmetry Go back to reload {1 1 1} option
+441,416.0,420.0,symmetry elements दिखाने के लिए दोबारा popअप menu खोलें,104662_SCzcMyA64dLtPMMJ_0078,SCzcMyA64dLtPMMJ,open the popup menu again to show the symmetry elements
+442,420.0,428.0,submenu में symmetry तक नीचे जाएँ और mirrorplane x z y विकल्प पर click करें,104662_SCzcMyA64dLtPMMJ_0079,SCzcMyA64dLtPMMJ,Scroll down to Symmetry in the submenu and click on the mirrorplane x z y option
+443,428.0,436.0,panel पर हमारे पास प्रदर्शित mirrorplane x z y के साथ cubic lattice है,104662_SCzcMyA64dLtPMMJ_0080,SCzcMyA64dLtPMMJ,panel we have the cubic lattice with the mirrorplane x z y displayed
+444,436.0,442.0,अब graphite के लिए cif file load करते हैं जो hexagonal crystal system में आता है,104662_SCzcMyA64dLtPMMJ_0081,SCzcMyA64dLtPMMJ,Now let's load the cif file for graphite which comes in hexagonal crystal system
+445,442.0,449.0,पहले प्रदर्शित की तरह panel पर graphite की cif file load करने के लिए open a file विकल्प का प्रयोग करें,104662_SCzcMyA64dLtPMMJ_0082,SCzcMyA64dLtPMMJ,Use the open a file option to load the cif file of graphite on the panel as shown earlier
+446,449.0,453.0,panel पर graphite का unit cell खुलता है,104662_SCzcMyA64dLtPMMJ_0083,SCzcMyA64dLtPMMJ,The unit cell of graphite opens on the panel
+447,453.0,455.0,unit cell parameters को देखें,104662_SCzcMyA64dLtPMMJ_0084,SCzcMyA64dLtPMMJ,refer to unit cell parameters
+448,455.0,460.0,vectors a b के बराबर है लेकिन c के बराबर नहीं है,104662_SCzcMyA64dLtPMMJ_0085,SCzcMyA64dLtPMMJ,vectors a is equal to b but not equal to c
+449,460.0,467.0,angles alpha और beta 90 degrees के बराबर हैं और gamma 120 degrees के बराबर है,104662_SCzcMyA64dLtPMMJ_0086,SCzcMyA64dLtPMMJ,angles alpha and beta are equal to 90 degrees and gamma is equal to 120 degrees
+450,467.0,476.0,popअप menu खोलें symmetry तक नीचे जाएँ और reload {444 666 1} विकल्प पर click करें,104662_SCzcMyA64dLtPMMJ_0087,SCzcMyA64dLtPMMJ,open popup menu scroll down to symmetry and click on reload {444 666 1} option
+451,476.0,481.0,screen पर परमाणुओं की hexagonal lattice व्यवस्था दिखती है,104662_SCzcMyA64dLtPMMJ_0088,SCzcMyA64dLtPMMJ,The hexagonal lattice arrangement of atoms appears on the screen.
+452,481.0,490.0,display को बदलने के लिए popअप menu खोलें style पर जाएँ scheme पर जाएँ wireframe विकल्प पर click करें,104662_SCzcMyA64dLtPMMJ_0089,SCzcMyA64dLtPMMJ,To change display open popup menu go to style go to scheme click on wireframe option
+453,490.0,496.0,उसी प्रकार मैंने panel पर calcite mineral की cif file खोल ली है,104662_SCzcMyA64dLtPMMJ_0090,SCzcMyA64dLtPMMJ,"Similarly, I have opened the cif file of calcite mineral on the panel."
+454,496.0,500.0,calcite rhombohedral crystal system me aata है,104662_SCzcMyA64dLtPMMJ_0091,SCzcMyA64dLtPMMJ,calcite rhombohedral crystal system me aata है
+455,500.0,507.0,आप किसी भी crystal system की cif खोल सकते हैं और structure और symmetry विकल्पों का अन्वेषण कर सकते हैं,104662_SCzcMyA64dLtPMMJ_0092,SCzcMyA64dLtPMMJ,You can open the cif of any crystal system and explore the structure and symmetry options
+456,507.0,515.0,इसे सारांशित करते हैं इस tutorial में हमने निम्न करना सीखा: crystallography open database से cif download करना,104662_SCzcMyA64dLtPMMJ_0093,SCzcMyA64dLtPMMJ,"To sum it up, in this tutorial we learned how to: download cif from crystallography open database"
+457,515.0,518.0,jmol में cif खोलना,104662_SCzcMyA64dLtPMMJ_0094,SCzcMyA64dLtPMMJ,opening cif in jmol
+458,518.0,521.0,unit cell और unit cell parameters को दिखाना,104662_SCzcMyA64dLtPMMJ_0095,SCzcMyA64dLtPMMJ,Display of unit cell and unit cell parameters
+459,521.0,527.0,और sodium chloride graphite और calcite के crystal structures को दिखाना,104662_SCzcMyA64dLtPMMJ_0096,SCzcMyA64dLtPMMJ,and showing the crystal structures of sodium chloride graphite and calcite
+460,527.0,533.0,नियत कार्य में,104662_SCzcMyA64dLtPMMJ_0097,SCzcMyA64dLtPMMJ,in assignment
+461,533.0,539.0,jmol panel पर unit cell दिखाएँ और symmetry विकल्पों का अन्वेषण करें,104662_SCzcMyA64dLtPMMJ_0098,SCzcMyA64dLtPMMJ,show unit cell on jmol panel and explore symmetry options
+462,539.0,542.0,यह video spoken tutorial project को सारांशित करता है,104662_SCzcMyA64dLtPMMJ_0099,SCzcMyA64dLtPMMJ,This video summarizes the spoken tutorial project
+463,542.0,546.0,अच्छी bandwidth न मिलने पर आप इसे download करके देख सकते हैं,104662_SCzcMyA64dLtPMMJ_0100,SCzcMyA64dLtPMMJ,"If you do not get good bandwidth, you can download and watch it."
+464,546.0,552.0,हम spoken tutorials का उपयोग करके कार्यशालाएं चलाते हैं और प्रमाणपत्र देते हैं कृपया हमसे संपर्क करें,104662_SCzcMyA64dLtPMMJ_0101,SCzcMyA64dLtPMMJ,We conduct workshops and certifications using spoken tutorials Please contact us
+465,552.0,558.0,spoken tutorial project भारत सरकार के एमएचआरडी के nmeict द्वारा निधिबद्ध है,104662_SCzcMyA64dLtPMMJ_0102,SCzcMyA64dLtPMMJ,"spoken tutorial project funded by nmeict of MHRD, Government of India"
+466,558.0,562.0,iit iit टी बॉम्बे से मैं श्रुति आर्य आपसे विदा लेती हूँ धन्यवाद,104662_SCzcMyA64dLtPMMJ_0103,SCzcMyA64dLtPMMJ,iit shruti arya from iit t bombay bids you farewell thank you
+467,2.0,6.0,ruby में वेरिएबल्स पर स्पोकन ट्यूटोरियल में आपका स्वागत है,106319_Uhh9KzP8SyfWszeJ_0000,Uhh9KzP8SyfWszeJ,Welcome to the spoken tutorial on variables in ruby
+468,6.0,9.0,इस tutorial में हम सीखेंगे,106319_Uhh9KzP8SyfWszeJ_0001,Uhh9KzP8SyfWszeJ,In this tutorial we will learn
+469,9.0,13.0,वेरिएबल क्या है  ruby में सक्रिय टाइपिंग,106319_Uhh9KzP8SyfWszeJ_0002,Uhh9KzP8SyfWszeJ,what is variable active typing in ruby
+470,13.0,15.0,वेरिएबल घोषित करना,106319_Uhh9KzP8SyfWszeJ_0003,Uhh9KzP8SyfWszeJ,declare variables
+471,15.0,18.0,वेरिएबल के प्रकार बदलना,106319_Uhh9KzP8SyfWszeJ_0004,Uhh9KzP8SyfWszeJ,change variable type
+472,18.0,20.0,वेरिएबल का स्कोप क्या है,106319_Uhh9KzP8SyfWszeJ_0005,Uhh9KzP8SyfWszeJ,what is the scope of the variable
+473,20.0,23.0,वेरिएबल के प्रकार,106319_Uhh9KzP8SyfWszeJ_0006,Uhh9KzP8SyfWszeJ,type of variable
+474,23.0,32.0,यहाँ हम उबंटु लिनक्स वर्जन 1204 ruby 193 उपयोग कर रहे हैं,106319_Uhh9KzP8SyfWszeJ_0007,Uhh9KzP8SyfWszeJ,here we are using ubuntu linux version 1204 ruby ​​193
+475,32.0,38.0,इस ट्यूटोरियल के अनुकरण के लिए आपको लिनक्स में टर्मिनल का ज्ञान होना आवश्यक है,106319_Uhh9KzP8SyfWszeJ_0008,Uhh9KzP8SyfWszeJ,To follow this tutorial you need to have knowledge of terminal in Linux
+476,38.0,41.0,आपको irb की जानकारी होनी आवश्यक है,106319_Uhh9KzP8SyfWszeJ_0009,Uhh9KzP8SyfWszeJ,you need to know irb
+477,41.0,47.0,यदि नहीं तो सम्बंधित ट्यूटोरियल के लिए दिखाई गयी हमारी वेबसाइट पर जाएँ,106319_Uhh9KzP8SyfWszeJ_0010,Uhh9KzP8SyfWszeJ,If not then visit our website shown for related tutorial
+478,47.0,50.0,अब मैं समझाउंगी कि वेरिएबल क्या है,106319_Uhh9KzP8SyfWszeJ_0011,Uhh9KzP8SyfWszeJ,now i will explain what is variable
+479,50.0,54.0,वेरिएबल का उपयोग एक वैल्यू संचित करने के लिए होता है,106319_Uhh9KzP8SyfWszeJ_0012,Uhh9KzP8SyfWszeJ,A variable is used to store a value
+480,54.0,58.0,वेरिएबल एक संदर्भ reference  है जिसे नियुक्त कर सकते हैं,106319_Uhh9KzP8SyfWszeJ_0013,Uhh9KzP8SyfWszeJ,Variable is a reference reference that can be assigned
+481,58.0,64.0,ध्यान दें कि ruby वेरिएबल्स केस सेंसिटिव हैं,106319_Uhh9KzP8SyfWszeJ_0014,Uhh9KzP8SyfWszeJ,Note that ruby ​​variables are case sensitive
+482,64.0,67.0,वेरिएबल का नाम अर्थपूर्ण होना चाहिए,106319_Uhh9KzP8SyfWszeJ_0015,Uhh9KzP8SyfWszeJ,variable name must be meaningful
+483,67.0,80.0,वेरिएबल नाम में केवल लोअरकेस लेटर्स नम्बर्स अंडरस्कोर्स होते हैं ex : first_name,106319_Uhh9KzP8SyfWszeJ_0016,Uhh9KzP8SyfWszeJ,Variable names contain only lowercase letter numbers with underscores ex : first_name
+484,80.0,83.0,अब देखते हैं सक्रीय टाइपिंग क्या है,106319_Uhh9KzP8SyfWszeJ_0017,Uhh9KzP8SyfWszeJ,Now let's see what is active typing
+485,83.0,87.0,ruby एक सक्रीय टाइप्ड भाषा है,106319_Uhh9KzP8SyfWszeJ_0018,Uhh9KzP8SyfWszeJ,ruby is a dynamic typed language
+486,87.0,94.0,इसका मतलब कि आपको वेरिएबल बनाते समय डेटाटाइप बताने की आवशयकता नहीं है,106319_Uhh9KzP8SyfWszeJ_0019,Uhh9KzP8SyfWszeJ,This means that you do not need to specify the datatype while creating the variable.
+487,94.0,99.0,rubyइंटरप्रेटर नियत कार्य के समय डेटा टाइप निर्धारित करता है,106319_Uhh9KzP8SyfWszeJ_0020,Uhh9KzP8SyfWszeJ,rubyinterpreter determine datatype at runtime
+488,99.0,105.0,अब देखते हैं कि ruby में वेरिएबल कैसे निर्धारित करें,106319_Uhh9KzP8SyfWszeJ_0021,Uhh9KzP8SyfWszeJ,Now let us see how to set variable in ruby
+489,105.0,111.0,एकसाथ ctrl  alt और t कीज़ दबाकर टर्मिनल खोलें,106319_Uhh9KzP8SyfWszeJ_0022,Uhh9KzP8SyfWszeJ,Open terminal by pressing ctrl alt and t keys simultaneously
+490,111.0,115.0,आपके स्क्रीन पर टर्मिनल विंडो प्रदर्शित होती है,106319_Uhh9KzP8SyfWszeJ_0023,Uhh9KzP8SyfWszeJ,Terminal window appears on your screen
+491,115.0,117.0,अब irb टाइप करें,106319_Uhh9KzP8SyfWszeJ_0024,Uhh9KzP8SyfWszeJ,now type irb
+492,117.0,122.0,इंटरैक्टिव ruby आरम्भ के लिए एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0025,Uhh9KzP8SyfWszeJ,press enter to start interactive ruby
+493,122.0,129.0,अब टाइप करें var1 equal to 10 और एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0026,Uhh9KzP8SyfWszeJ,now type var1 equal to 10 and press enter
+494,129.0,135.0,यहाँ हमने एक वेरिएबल var1 घोषित किया और उसकी वैल्यू 10 निर्धारित की,106319_Uhh9KzP8SyfWszeJ_0027,Uhh9KzP8SyfWszeJ,Here we have declared a variable var1 and set its value as 10.
+495,135.0,141.0,अब जाँचते हैं कि इंटरप्रेटर द्वारा दिया गया डेटाटाइप इंटीजर है या नहीं,106319_Uhh9KzP8SyfWszeJ_0028,Uhh9KzP8SyfWszeJ,Now let's check whether the datatype returned by the interpreter is Integer or not
+496,141.0,157.0,अब टाइप करें var1 dot kind_underscore of question mark integer और एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0029,Uhh9KzP8SyfWszeJ,Now type var1 dot kind_underscore of question mark integer and press enter
+497,157.0,159.0,हमें आउटपुट true की तरह मिलेगा,106319_Uhh9KzP8SyfWszeJ_0030,Uhh9KzP8SyfWszeJ,we will get output like true
+498,159.0,164.0,ruby में वेरिएबल टाइप को सक्रियता से बदल सकते हैं,106319_Uhh9KzP8SyfWszeJ_0031,Uhh9KzP8SyfWszeJ,change variable type dynamically in ruby
+499,164.0,167.0,ऐसा करने के लिए इसकी एक नयी वैल्यू निर्धारित करें,106319_Uhh9KzP8SyfWszeJ_0032,Uhh9KzP8SyfWszeJ,"To do this, set a new value for"
+500,167.0,173.0,इसको var 1 को एक string वैल्यू निर्धारित करके करें,106319_Uhh9KzP8SyfWszeJ_0033,Uhh9KzP8SyfWszeJ,Do this by assigning a string value to var 1
+501,173.0,182.0,टाइप करें var1 equal to डबल कोट्स में hello और एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0034,Uhh9KzP8SyfWszeJ,type var1 equal to hello in double quotes and press enter
+502,182.0,186.0,निर्धारित वेरिएबल टाइप को सत्यापित करें,106319_Uhh9KzP8SyfWszeJ_0035,Uhh9KzP8SyfWszeJ,Verify defined variable type
+503,186.0,192.0,टाइप करें var1 dot class,106319_Uhh9KzP8SyfWszeJ_0036,Uhh9KzP8SyfWszeJ,type var1 dot class
+504,192.0,200.0,क्लास मेथड बताता है कि यह वेरिएबल किस क्लास का है अब एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0037,Uhh9KzP8SyfWszeJ,class method tells what class this variable belongs to now press enter
+505,200.0,203.0,हमें आउटपुट string मिलता है,106319_Uhh9KzP8SyfWszeJ_0038,Uhh9KzP8SyfWszeJ,we get the output string
+506,203.0,209.0,ruby ने अपने आप से वेरिएबल टाइप को इन्टिजर से स्ट्रिंग में बदल दिया है,106319_Uhh9KzP8SyfWszeJ_0039,Uhh9KzP8SyfWszeJ,ruby automatically converted variable type from integer to string
+507,209.0,215.0,अब हम सीखेंगे कि वेरिएबल वैल्यू को भिन्न प्रकार से कैसे बदलें,106319_Uhh9KzP8SyfWszeJ_0040,Uhh9KzP8SyfWszeJ,Now we will learn how to change the variable value in different ways
+508,215.0,218.0,वापस स्लाइड्स पर आएँ,106319_Uhh9KzP8SyfWszeJ_0041,Uhh9KzP8SyfWszeJ,back to slides
+509,218.0,225.0,ruby वेरिएबल क्लासेस में उनकी वैल्यूज को भिन्न प्रकार से बदलने की विधियाँ होती हैं,106319_Uhh9KzP8SyfWszeJ_0042,Uhh9KzP8SyfWszeJ,ruby variable classes have methods to change their values ​​in different ways
+510,225.0,231.0,to_i मेथड वेरिएबल को इंटीजर  में बदलने के लिए उपयोगी है,106319_Uhh9KzP8SyfWszeJ_0043,Uhh9KzP8SyfWszeJ,to_i method is useful to convert variable to integer
+511,231.0,237.0,to _f मेथड वेरिएबल को फ्लोटिंग पॉइन्ट में बदलने के लिए उपयोगी है,106319_Uhh9KzP8SyfWszeJ_0044,Uhh9KzP8SyfWszeJ,to _f method is useful for converting variable to floating point
+512,237.0,243.0,to_s मेथड वेरिएबल को स्ट्रिंग string में बदलने में उपयोगी है,106319_Uhh9KzP8SyfWszeJ_0045,Uhh9KzP8SyfWszeJ,to_s method is useful to convert variable to string
+513,243.0,248.0,to_s मेथड नंबर बेस को आर्गुमेंट की तरह लेता है,106319_Uhh9KzP8SyfWszeJ_0046,Uhh9KzP8SyfWszeJ,to_s method takes number base as argument
+514,248.0,252.0,रूपांतरण इस नंबर बेस पर निर्भर करता है,106319_Uhh9KzP8SyfWszeJ_0047,Uhh9KzP8SyfWszeJ,Conversion depends on this number base
+515,252.0,255.0,अब इसका अभ्यास करें,106319_Uhh9KzP8SyfWszeJ_0048,Uhh9KzP8SyfWszeJ,practice it now
+516,255.0,261.0,टर्मिनल पर जाएँ सबसे पहले टर्मिनल को क्लियर करें,106319_Uhh9KzP8SyfWszeJ_0049,Uhh9KzP8SyfWszeJ,go to terminal first clear the terminal
+517,261.0,265.0,irb कंसोल को क्लियर करने के लिए ctrl lदबाएँ,106319_Uhh9KzP8SyfWszeJ_0050,Uhh9KzP8SyfWszeJ,press ctrl l to clear the irb console
+518,265.0,272.0,अब टाइप करें y is equal to 20 और एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0051,Uhh9KzP8SyfWszeJ,Now type y is equal to 20 and press enter
+519,272.0,279.0,यहाँ हम एक वेरिएबल y घोषित करते हैं और उसकी वैल्यू 20 निर्धारित करते हैं,106319_Uhh9KzP8SyfWszeJ_0052,Uhh9KzP8SyfWszeJ,Here we declare a variable y and assign its value to 20
+520,279.0,287.0,यहाँ हम to_f मेथड उपयोग करके y को फ्लोटिंग पॉइन्ट वैल्यू में बदलेंगे,106319_Uhh9KzP8SyfWszeJ_0053,Uhh9KzP8SyfWszeJ,Here we will convert y to floating point value using to_f method
+521,287.0,295.0,टाइप करें y dot to_f  और एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0054,Uhh9KzP8SyfWszeJ,type y dot to_f and press enter
+522,295.0,297.0,हमें एक फ्लोट की तरह एक वैल्यू मिलती है,106319_Uhh9KzP8SyfWszeJ_0055,Uhh9KzP8SyfWszeJ,we get a value as a float
+523,297.0,306.0,टाइप करें y dot to_s और एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0056,Uhh9KzP8SyfWszeJ,type y dot to_s and press enter
+524,306.0,310.0,हमें डबल कोट्स में आउटपुट 20 मिलता है,106319_Uhh9KzP8SyfWszeJ_0057,Uhh9KzP8SyfWszeJ,we get output 20 in double quotes
+525,310.0,318.0,वेरिएबल y को बाइनरी फॉर्म में बदलने के लिए to_s मेथड में नंबर बेस 2 दें,106319_Uhh9KzP8SyfWszeJ_0058,Uhh9KzP8SyfWszeJ,"To convert the variable y into binary form, pass the number base 2 to the to_s method."
+526,318.0,322.0,पिछली कमांड में जाने के लिए अप एरो की दबाएं,106319_Uhh9KzP8SyfWszeJ_0059,Uhh9KzP8SyfWszeJ,Press the up arrow key to go to the previous command
+527,322.0,329.0,टाइप करें ओपनिंग ब्रैकेट 2 क्लोजिंग ब्रैकेट और एंटर दबाएं,106319_Uhh9KzP8SyfWszeJ_0060,Uhh9KzP8SyfWszeJ,Type opening bracket 2 closing bracket and press Enter
+528,329.0,333.0,हमें बाइनरी फॉर्म में आउटपुट मिलता है,106319_Uhh9KzP8SyfWszeJ_0061,Uhh9KzP8SyfWszeJ,we get the output in binary form
+529,333.0,339.0,इसी तरह आप variable y को octal और hexadesimal फॉर्म में भी बदल सकते हैं,106319_Uhh9KzP8SyfWszeJ_0062,Uhh9KzP8SyfWszeJ,"Similarly, you can convert the variable y into octal and hexadecimal form as well."
+530,339.0,344.0,नंबर बेस को 8 या 16 में बदलकर,106319_Uhh9KzP8SyfWszeJ_0063,Uhh9KzP8SyfWszeJ,changing the number base to 8 or 16
+531,344.0,347.0,अपनी slides पर वापस आते हैं,106319_Uhh9KzP8SyfWszeJ_0064,Uhh9KzP8SyfWszeJ,come back to your slides
+532,347.0,351.0,अब हम सीखेंगे कि वेरिएबल स्कोप क्या होता है,106319_Uhh9KzP8SyfWszeJ_0065,Uhh9KzP8SyfWszeJ,Now we will learn what is variable scope
+533,351.0,356.0,स्कोप बताता है कि वेरिएबल को प्रोग्राम में कहाँ एक्सेस कर सकते हैं,106319_Uhh9KzP8SyfWszeJ_0066,Uhh9KzP8SyfWszeJ,Scope tells where the variable can be accessed in the program
+534,356.0,360.0,ruby के चार तरह के वेरिएबल स्कोप होते हैं :,106319_Uhh9KzP8SyfWszeJ_0067,Uhh9KzP8SyfWszeJ,There are four types of variable scopes in ruby:
+535,360.0,362.0,लोकल local  ग्लोबल global,106319_Uhh9KzP8SyfWszeJ_0068,Uhh9KzP8SyfWszeJ,local local global global
+536,362.0,364.0,इंस्टैंस instance और,106319_Uhh9KzP8SyfWszeJ_0069,Uhh9KzP8SyfWszeJ,instance instance and
+537,364.0,366.0,क्लास class,106319_Uhh9KzP8SyfWszeJ_0070,Uhh9KzP8SyfWszeJ,class class
+538,366.0,374.0,प्रत्येक वेरिएबल का प्रकार वेरिएबल नाम की शुरुआत में एक स्पेशल करैक्टर के द्वारा बताया जाता है,106319_Uhh9KzP8SyfWszeJ_0071,Uhh9KzP8SyfWszeJ,The type of each variable is specified by a special character at the beginning of the variable name.
+539,374.0,378.0,$ ग्लोबल वेरिएबल दर्शाता है,106319_Uhh9KzP8SyfWszeJ_0072,Uhh9KzP8SyfWszeJ,$ represents global variable
+540,378.0,385.0,लोअर केस लेटर और अंडरस्कोर लोकल वेरिएबल दर्शाता है,106319_Uhh9KzP8SyfWszeJ_0073,Uhh9KzP8SyfWszeJ,Lower case letter and underscore represent local variable
+541,385.0,389.0,@ इंस्टैंस वेरिएबल दर्शाते है,106319_Uhh9KzP8SyfWszeJ_0074,Uhh9KzP8SyfWszeJ,@denotes instance variable
+542,389.0,393.0,दो @@ सिंबल क्लास वेरिएबल दर्शाते हैं,106319_Uhh9KzP8SyfWszeJ_0075,Uhh9KzP8SyfWszeJ,two @@ symbols represent class variables
+543,393.0,397.0,अपर केस लेटर्स कांस्टेंट दर्शाता है,106319_Uhh9KzP8SyfWszeJ_0076,Uhh9KzP8SyfWszeJ,upper case letters represent constants
+544,397.0,402.0,इसके बारे में हम विस्तार में अगले ट्यूटोरियल में सीखेंगे,106319_Uhh9KzP8SyfWszeJ_0077,Uhh9KzP8SyfWszeJ,We will learn about this in detail in the next tutorial
+545,402.0,408.0,इसके साथ हम स्पोकन ट्यूटोरियल के अंत में आ गए हैं इसको सरांशित करते हैं,106319_Uhh9KzP8SyfWszeJ_0078,Uhh9KzP8SyfWszeJ,With this we come to the end of the spoken tutorial let's sum up
+546,408.0,411.0,इस टुटोरिअल में हमने सीखा,106319_Uhh9KzP8SyfWszeJ_0079,Uhh9KzP8SyfWszeJ,In this tutorial we learned
+547,411.0,416.0,एक वेरिएबल घोषित करना जैसे var 1 = 10,106319_Uhh9KzP8SyfWszeJ_0080,Uhh9KzP8SyfWszeJ,declaring a variable like var 1 = 10
+548,416.0,424.0,to_f  to_s मेथड्स उपयोग करके वेरिएबल टाइप बदलना,106319_Uhh9KzP8SyfWszeJ_0081,Uhh9KzP8SyfWszeJ,Changing variable type using to_f to_s methods
+549,424.0,426.0,भिन्न वेरिएबल स्कोप,106319_Uhh9KzP8SyfWszeJ_0082,Uhh9KzP8SyfWszeJ,different variable scope
+550,426.0,428.0,नियतकार्य के रूप में,106319_Uhh9KzP8SyfWszeJ_0083,Uhh9KzP8SyfWszeJ,as an assignment
+551,428.0,434.0,एक वेरिएबल घोषित करें और इसको octal और hexadecimal फॉर्म में बदलें,106319_Uhh9KzP8SyfWszeJ_0084,Uhh9KzP8SyfWszeJ,Declare a variable and convert it to octal and hexadecimal form
+552,434.0,437.0,दिए गए लिंक पर उपलब्ध विडिओ को देखें,106319_Uhh9KzP8SyfWszeJ_0085,Uhh9KzP8SyfWszeJ,Watch the video available on the given link
+553,437.0,440.0,यह स्पोकन ट्यूटोरियल प्रोजेक्ट को सरांशित करता है,106319_Uhh9KzP8SyfWszeJ_0086,Uhh9KzP8SyfWszeJ,This spoken tutorial summarizes the project
+554,440.0,444.0,अच्छी बैंडविड्थ न मिलने पर आप इसको डाउनलोड करके देख सकते हैं,106319_Uhh9KzP8SyfWszeJ_0087,Uhh9KzP8SyfWszeJ,"If you do not get good bandwidth, you can download and watch it"
+555,444.0,447.0,spoken tutorial project team:,106319_Uhh9KzP8SyfWszeJ_0088,Uhh9KzP8SyfWszeJ,spoken tutorial project team:
+556,447.0,450.0,स्पोकन ट्यूटोरियल का उपयोग करके कार्यशालाएं चलती है,106319_Uhh9KzP8SyfWszeJ_0089,Uhh9KzP8SyfWszeJ,Workshops run using spoken tutorials
+557,450.0,454.0,online test pass करने वालों को प्रमाणपत्र देते हैं,106319_Uhh9KzP8SyfWszeJ_0090,Uhh9KzP8SyfWszeJ,Certificates are given to those who pass the online test
+558,454.0,461.0,ज्यादा जानकारी के लिए contact@spokentutorialorg को लिखें,106319_Uhh9KzP8SyfWszeJ_0091,Uhh9KzP8SyfWszeJ,For more information write to contact@spokentutorialorg
+559,461.0,465.0,स्पोकन ट्यूटोरियल प्रोजेक्ट टॉक टू अ टीचर प्रोजेक्ट का हिस्सा है,106319_Uhh9KzP8SyfWszeJ_0092,Uhh9KzP8SyfWszeJ,The spoken tutorial project is part of the Talk to a Teacher project
+560,465.0,471.0,यह भारत सरकार के एमएचआरडी के आईसीटी के माध्यम से राष्ट्रीय साक्षरता मिशन द्वारा समर्थित है,106319_Uhh9KzP8SyfWszeJ_0093,Uhh9KzP8SyfWszeJ,"It is supported by National Mission on Literacy through ICT of MHRD, Government of India"
+561,471.0,477.0,इस मिशन पर अधिक जानकारी दिए लिंक पर उपलब्ध है,106319_Uhh9KzP8SyfWszeJ_0094,Uhh9KzP8SyfWszeJ,More information on this mission is available at the link given
+562,477.0,484.05,आई आई टी मुंबई से मैं श्रुति आर्य अब आपसे विदा लेती हूँ हमसे जुड़ने के लिए धन्यवाद,106319_Uhh9KzP8SyfWszeJ_0095,Uhh9KzP8SyfWszeJ,I Shruti Arya from IIT Bombay bid you farewell. Thank you for joining us.
